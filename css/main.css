@@ -29,20 +29,21 @@ body {
 .container {
   max-width: 1840px;
   margin: 0 auto;
+  padding: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .container {
     padding: 24px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1250px) {
   .container {
     padding: 24px;
   }
 }
-@media (min-width: 1024px) {
+@media (max-width: 1250px) {
   .container {
-    padding: 40px;
+    padding: 24px;
   }
 }
 
@@ -312,7 +313,7 @@ body {
   flex-direction: column;
   gap: 30px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__navigation {
     gap: 15px;
     order: 1;
@@ -323,7 +324,7 @@ body {
   display: flex;
   gap: 30px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__nav-items {
     gap: 15px;
   }
@@ -377,7 +378,7 @@ body {
   transition: all 0.3s ease;
   min-width: 20px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__nav-number {
     font-size: 12px;
   }
@@ -389,7 +390,7 @@ body {
   font-weight: 400;
   transition: all 0.3s ease;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__nav-title {
     font-size: 14px;
   }
@@ -406,7 +407,7 @@ body {
   align-items: flex-end;
   padding: 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__content {
     flex-direction: column;
     justify-content: space-between;
@@ -419,7 +420,7 @@ body {
   flex: 1;
   max-width: 430px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__description {
     max-width: 100%;
     order: 1;
@@ -448,15 +449,18 @@ body {
   font-family: "SportingGrotesque", sans-serif;
   font-size: 48px;
   line-height: 1.1;
-  margin: 0 0 10px 0;
+  margin: 0px;
   display: flex;
   align-items: flex-end;
   gap: 10px;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__title {
     font-size: 32px;
   }
+}
+.slider__title svg {
+  height: 36px;
 }
 
 .slider__category {
@@ -464,6 +468,11 @@ body {
   font-family: "SportingGrotesque", sans-serif;
   font-size: 48px;
   line-height: 1.1;
+}
+@media (max-width: 1250px) {
+  .slider__category {
+    font-size: 32px;
+  }
 }
 
 .slider__link {
@@ -494,7 +503,7 @@ body {
     max-width: 670px;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__controls {
     align-items: flex-start;
     max-width: 100%;
@@ -513,7 +522,7 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-@media (max-width: 767px) {
+@media (max-width: 1250px) {
   .slider__cta-button {
     order: 2;
     width: 100%;

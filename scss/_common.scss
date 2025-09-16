@@ -2,7 +2,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-// Подключение шрифтов
 @include font-face('Inter', '../fonts/Inter.woff2');
 @include font-face('SportingGrotesque', '../fonts/SportingGrotesque.woff2');
 
