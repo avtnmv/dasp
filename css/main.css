@@ -322,6 +322,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Fallback для браузеров без поддержки WebP */
+  background-color: #f0f0f0;
 }
 .slider__slide.active {
   opacity: 1;
