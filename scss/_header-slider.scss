@@ -4,20 +4,16 @@
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 100vh; /* Fallback для старых браузеров */
-    height: 100dvh; /* Динамическая высота viewport (учитывает адресную строку) */
+    height: 100dvh; 
     
-    /* Дополнительная поддержка для мобильных устройств */
-    @supports (-webkit-touch-callout: none) {
-        /* iOS Safari */
-        height: -webkit-fill-available;
-    }
+    // @supports (-webkit-touch-callout: none) {
+    //     height: -webkit-fill-available;
+    // }
     
-    /* Поддержка для старых версий Safari */
-    @media screen and (max-width: 768px) {
-        min-height: 100vh;
-        min-height: -webkit-fill-available;
-    }
+    // @media screen and (max-width: 768px) {
+    //     min-height: 100vh;
+    //     min-height: -webkit-fill-available;
+    // }
 }
 
 .slider__container {
@@ -136,7 +132,6 @@
     }
 }
 
-// Контент слайдера
 .slider__content {
     position: absolute;
     bottom: 0;
