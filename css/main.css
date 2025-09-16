@@ -129,7 +129,7 @@ body {
 .header__mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
   margin-bottom: 32px;
 }
 
