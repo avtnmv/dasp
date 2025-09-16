@@ -1,0 +1,528 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SportingGrotesque";
+  src: url("../fonts/SportingGrotesque.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  max-width: 1840px;
+  margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 24px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding: 40px;
+  }
+}
+
+.header {
+  position: relative;
+}
+
+.header__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 1001;
+}
+.header__logo svg {
+  width: 130px;
+  height: 49px;
+}
+@media (max-width: 767px) {
+  .header__logo svg {
+    width: 97px;
+    height: 37px;
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header__nav a {
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__mobile-menu {
+  display: none;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header__mobile-menu {
+    display: block;
+  }
+}
+
+.header__mobile-dropdown {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 95px 24px 24px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.header__mobile-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.header__mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.header__mobile-nav-item {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+.header__mobile-nav-item:hover {
+  opacity: 0.7;
+}
+
+.header__mobile-contact {
+  margin-bottom: 32px;
+}
+
+.header__mobile-contact-item {
+  margin-bottom: 15px;
+}
+.header__mobile-contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.header__mobile-contact-item a:hover {
+  opacity: 1;
+}
+
+.header__mobile-description p {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 30px 0;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.header__mobile-cta {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  width: 100%;
+}
+.header__mobile-cta:hover {
+  background: #ffffff;
+  color: #080808;
+}
+
+.header__mobile-burger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 24px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+.header__mobile-burger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+.header__mobile-burger.active span:first-child {
+  transform: rotate(45deg) translate(3px, 3px);
+  background-color: #ffffff;
+}
+.header__mobile-burger.active span:last-child {
+  transform: rotate(-45deg) translate(3px, -3px);
+  background-color: #ffffff;
+}
+
+.header__projects-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 14px;
+  transition: all 0.3s ease;
+}
+.header__hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #a6a6a6;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+.header__hamburger.active {
+  transform: rotate(90deg);
+}
+
+.header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  min-width: 200px;
+}
+.header__dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header__dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+}
+
+.header__dropdown-item a {
+  display: block;
+  color: #a6a6a6;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+.header__dropdown-item a:hover {
+  color: #ffffff;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slider__slide.active {
+  opacity: 1;
+}
+
+.slider__navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .slider__navigation {
+    gap: 15px;
+    order: 1;
+  }
+}
+
+.slider__nav-items {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .slider__nav-items {
+    gap: 15px;
+  }
+}
+
+.slider__nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.slider__nav-item:hover .slider__nav-number {
+  color: #ffffff;
+}
+.slider__nav-item:hover .slider__nav-title {
+  color: #ffffff;
+}
+.slider__nav-item.active .slider__nav-number {
+  color: #ffffff;
+}
+.slider__nav-item.active .slider__nav-title {
+  color: #ffffff;
+}
+
+.slider__nav-progress {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.slider__nav-item.active .slider__nav-progress {
+  opacity: 1;
+}
+
+.slider__nav-progress-bar {
+  height: 100%;
+  background-color: #ffffff;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.slider__nav-number {
+  font-size: 14px;
+  color: #a6a6a6;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  min-width: 20px;
+}
+@media (max-width: 767px) {
+  .slider__nav-number {
+    font-size: 12px;
+  }
+}
+
+.slider__nav-title {
+  font-size: 16px;
+  color: #a6a6a6;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .slider__nav-title {
+    font-size: 14px;
+  }
+}
+
+.slider__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px;
+}
+@media (max-width: 767px) {
+  .slider__content {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+  }
+}
+
+.slider__description {
+  flex: 1;
+  max-width: 430px;
+}
+@media (max-width: 767px) {
+  .slider__description {
+    max-width: 100%;
+    order: 1;
+    margin-top: 80px;
+    text-align: left;
+    align-self: flex-start;
+  }
+}
+
+.slider__title-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.slider__subtitle {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  opacity: 0.8;
+}
+
+.slider__title {
+  color: #ffffff;
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+  margin: 0 0 10px 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .slider__title {
+    font-size: 32px;
+  }
+}
+
+.slider__category {
+  color: #ffffff;
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.slider__link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 2px;
+  transition: opacity 0.3s ease;
+  display: block;
+  margin-top: 16px;
+  max-width: fit-content;
+}
+.slider__link:hover {
+  opacity: 0.7;
+}
+
+.slider__controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  max-width: 970px;
+  width: 100%;
+  justify-content: space-between;
+}
+@media (max-width: 1680px) {
+  .slider__controls {
+    max-width: 670px;
+  }
+}
+@media (max-width: 767px) {
+  .slider__controls {
+    align-items: flex-start;
+    max-width: 100%;
+    order: 2;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.slider__cta-button {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 20px 24px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .slider__cta-button {
+    order: 2;
+    width: 100%;
+    text-align: center;
+  }
+}
+.slider__cta-button:hover {
+  background: #ffffff;
+  color: #080808;
+}
+
+/*# sourceMappingURL=main.css.map */

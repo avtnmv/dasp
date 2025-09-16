@@ -8,11 +8,11 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Скомпилированные CSS файлы
-css/main.css
-css/main.css.map
-css/*.css
-css/*.map
+# Скомпилированные CSS файлы (исключены для GitHub Pages)
+# css/main.css
+# css/main.css.map
+# css/*.css
+# css/*.map
 
 # Временные файлы
 *.tmp
