@@ -183,11 +183,12 @@
     
     @media (max-width: 1250px) {
         font-size: 32px;
+        
+        svg {
+            height: 36px;
+        }
     }
 
-    svg {
-        height: 36px;
-    }
 }
 
 .slider__category {

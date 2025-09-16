@@ -458,9 +458,9 @@ body {
   .slider__title {
     font-size: 32px;
   }
-}
-.slider__title svg {
-  height: 36px;
+  .slider__title svg {
+    height: 36px;
+  }
 }
 
 .slider__category {
