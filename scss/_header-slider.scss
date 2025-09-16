@@ -1,0 +1,252 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    &.active {
+        opacity: 1;
+    }
+}
+
+.slider__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+    @include mobile {
+        gap: 15px;
+        order: 1;
+    }
+}
+
+.slider__nav-items {
+    display: flex;
+    gap: 30px;
+    
+    @include mobile {
+        gap: 15px;
+    }
+}
+
+.slider__nav-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+        .slider__nav-number {
+            color: $color-white;
+        }
+        
+        .slider__nav-title {
+            color: $color-white;
+        }
+    }
+    
+    &.active {
+        .slider__nav-number {
+            color: $color-white;
+        }
+        
+        .slider__nav-title {
+            color: $color-white;
+        }
+    }
+}
+
+.slider__nav-progress {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    
+    .slider__nav-item.active & {
+        opacity: 1;
+    }
+}
+
+.slider__nav-progress-bar {
+    height: 100%;
+    background-color: $color-white;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.slider__nav-number {
+    font-size: 14px;
+    color: $color-light-gray;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    min-width: 20px;
+    
+    @include mobile {
+        font-size: 12px;
+    }
+}
+
+.slider__nav-title {
+    font-size: 16px;
+    color: $color-light-gray;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+// Контент слайдера
+.slider__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 40px;
+    
+    @include mobile {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        padding: 20px;
+    }
+}
+
+.slider__description {
+    flex: 1;
+    max-width: 430px;
+    
+    @include mobile {
+        max-width: 100%;
+        order: 1;
+        margin-top: 80px; // Отступ от навигации сверху
+        text-align: left;
+        align-self: flex-start;
+    }
+}
+
+.slider__title-container{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.slider__subtitle {
+    color: $color-white;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+    opacity: 0.8;
+}
+
+.slider__title {
+    color: $color-white;
+    font-family: $font-title;
+    font-size: 48px;
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    
+    @include mobile {
+        font-size: 32px;
+    }
+}
+
+.slider__category {
+    color: $color-white;
+    font-family: $font-title;
+    font-size: 48px;
+    line-height: 1.1;
+}
+
+.slider__link {
+    color: $color-white;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid $color-white;
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+    display: block;
+    margin-top: 16px;
+    max-width: fit-content;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.slider__controls {
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+    max-width: 970px;
+    width: 100%;
+    justify-content: space-between;
+    
+    @media (max-width: 1680px) {
+        max-width: 670px;
+    }
+    
+    @include mobile {
+        align-items: flex-start;
+        max-width: 100%;
+        order: 2;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.slider__cta-button {
+    background: transparent;
+    border: 1px solid $color-white;
+    color: $color-white;
+    padding: 20px 24px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    @include mobile {
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+    
+    &:hover {
+        background: $color-white;
+        color: $color-black;
+    }
+}

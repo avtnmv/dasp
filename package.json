@@ -1,0 +1,24 @@
+{
+  "name": "dasp-project",
+  "version": "1.0.0",
+  "description": "DASP Project with SCSS architecture",
+  "main": "index.html",
+  "scripts": {
+    "build-css": "sass scss/main.scss css/main.css --style=compressed --source-map",
+    "watch-css": "sass scss/main.scss css/main.css --watch --style=expanded --source-map",
+    "dev": "sass scss/main.scss css/main.css --watch --style=expanded --source-map",
+    "build": "npm run build-css",
+    "clean": "rm -rf css/main.css css/main.css.map"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "frontend",
+    "wordpress"
+  ],
+  "author": "",
+  "license": "MIT"
+}

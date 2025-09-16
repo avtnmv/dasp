@@ -1,0 +1,54 @@
+@use 'variables' as *;
+
+// Медиа-запросы
+@mixin mobile {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin large-desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+// Контейнер
+@mixin container {
+  max-width: $container-width;
+  margin: 0 auto;
+
+  @include mobile {
+    padding: 24px;
+  }
+
+  @include tablet {
+    padding: 24px;
+  }
+  
+  @include desktop {
+    padding: 40px;
+  }
+}
+
+@mixin font-face($name, $path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url($path) format('woff2');
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}

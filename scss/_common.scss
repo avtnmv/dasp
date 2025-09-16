@@ -1,0 +1,28 @@
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Подключение шрифтов
+@include font-face('Inter', '../fonts/Inter.woff2');
+@include font-face('SportingGrotesque', '../fonts/SportingGrotesque.woff2');
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+}
+
+
+.container {
+  @include container;
+}
