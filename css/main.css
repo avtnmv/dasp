@@ -365,23 +365,6 @@ body:not(.preloader-active) .footer {
   width: 100%;
   height: 100vh; /* Fallback для старых браузеров */
   height: 100dvh; /* Динамическая высота viewport (учитывает адресную строку) */
-  overflow: hidden;
-  /* Дополнительная поддержка для мобильных устройств */
-}
-@supports (-webkit-touch-callout: none) {
-  .hero-slider {
-    /* iOS Safari */
-    height: -webkit-fill-available;
-  }
-}
-.hero-slider {
-  /* Поддержка для старых версий Safari */
-}
-@media screen and (max-width: 768px) {
-  .hero-slider {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
-  }
 }
 
 .slider__container {
