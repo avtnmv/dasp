@@ -300,13 +300,33 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  /* iOS Safari specific */
+  /* iOS */
 }
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
     .hero-slider {
       height: 90vh;
     }
+  }
+}
+.hero-slider {
+  /* Chrome */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @supports not (-webkit-touch-callout: none) {
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
+      .hero-slider {
+        height: 99vh;
+      }
+    }
+  }
+}
+.hero-slider {
+  /* Firefox */
+}
+@media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 767px) {
+  .hero-slider {
+    height: 100vh;
   }
 }
 
