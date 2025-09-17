@@ -1,6 +1,5 @@
 @use 'variables' as *;
 
-// Медиа-запросы
 @mixin mobile {
   @media (max-width: #{$breakpoint-sm - 1px}) {
     @content;
@@ -43,8 +42,6 @@
   }
 }
 
-
-
 @mixin font-face($name, $path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $name;
@@ -55,15 +52,11 @@
   }
 }
 
-@mixin full-height-stable {
-  /* Фоллбек */
-  min-height: -webkit-fill-available;
+@mixin full-height-100vh {
+  height: 100vh;
 
-  /* Стабильный viewport */
-  height: 100svh; // stable viewport height
-
-  /* На всякий случай large viewport */
-  @supports (height: 100lvh) {
-    height: 100lvh;
+  /* Safari iOS fix */
+  @supports (-webkit-touch-callout: none) {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }

@@ -7,7 +7,7 @@
     height: 100vh;
         
     @include mobile {
-        @include full-height-stable;
+        @include full-height-100vh;
       }
 }
 
