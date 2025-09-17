@@ -311,13 +311,7 @@
 }
 @media (max-width: 767px) {
   .hero-slider {
-    height: 100vh;
-    /* Safari iOS fix */
-  }
-  @supports (-webkit-touch-callout: none) {
-    .hero-slider {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
+    height: 100%;
   }
 }
 
@@ -328,13 +322,7 @@
 }
 @media (max-width: 767px) {
   .slider__container {
-    height: 100vh;
-    /* Safari iOS fix */
-  }
-  @supports (-webkit-touch-callout: none) {
-    .slider__container {
-      padding-bottom: env(safe-area-inset-bottom);
-    }
+    height: 100%;
   }
 }
 

@@ -53,10 +53,5 @@
 }
 
 @mixin full-height-100vh {
-  height: 100vh;
-
-  /* Safari iOS fix */
-  @supports (-webkit-touch-callout: none) {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
+  height: 100%;
 }
