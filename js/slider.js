@@ -15,22 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Данные для каждого слайда
     const slideData = [
-        {
-            subtitle: "Продуманий комерційний простір з фокусом на результат і комфорт",
-            title: "Dellicia",
-            category: "Ресторан"
-        },
-        {
-            subtitle: "Продуманий комерційний простір з фокусом на результат і комфорт",
-            title: "Beter Live",
-            category: "Офіс"
-        },
-        {
-            subtitle: "Продуманий комерційний простір з фокусом на результат і комфорт",
-            title: "Frau Kos",
-            category: "Кондитерська"
-        }
+        { title: "Dellicia", category: "Ресторан" },
+        { title: "Beter Live", category: "Офіс" },
+        { title: "Frau Kos", category: "Кондитерська" }
     ];
+    
+    const commonSubtitle = "Продуманий комерційний простір з фокусом на результат і комфорт";
 
     // Функция для обновления контента слайда
     function updateSlideContent(index) {
@@ -39,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const category = document.querySelector('.slider__category');
         
         if (subtitle && title && category) {
-            subtitle.textContent = slideData[index].subtitle;
+            subtitle.textContent = commonSubtitle;
             
             // Обновляем заголовок, сохраняя SVG
             const svgElement = title.querySelector('svg');
@@ -147,8 +137,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         });
     });
-
-    // Убрана заморозка при наведении мыши
 
     // Инициализация
     showSlide(0);
