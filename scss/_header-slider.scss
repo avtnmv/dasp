@@ -5,9 +5,12 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    
-    @include mobile{
-        height: 90vh;
+        
+    /* iOS Safari specific */
+    @supports (-webkit-touch-callout: none) {
+        @include mobile {
+            height: 90vh;
+        }
     }
 }
 
@@ -171,6 +174,10 @@
     line-height: 1.4;
     margin: 0 0 20px 0;
     opacity: 0.8;
+
+    @include mobile{
+        max-width: 330px;
+    }
 }
 
 .slider__title {
@@ -184,7 +191,7 @@
     gap: 10px;
     
     @media (max-width: 1250px) {
-        font-size: 32px;
+        font-size: 34px;
         
         svg {
             height: 36px;
@@ -200,7 +207,7 @@
     line-height: 1.1;
 
     @media (max-width: 1250px) {
-        font-size: 32px;
+        font-size: 34px;
     }
 }
 
