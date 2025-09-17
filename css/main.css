@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2");
@@ -311,24 +312,16 @@
 }
 @media (max-width: 767px) {
   .hero-slider {
-    height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    /* Фоллбек */
     min-height: -webkit-fill-available;
+    /* Стабильный viewport */
     height: 100svh;
-  }
-  @supports (height: 100dvh) {
-    .hero-slider {
-      height: 100dvh;
-    }
+    /* На всякий случай large viewport */
   }
   @supports (height: 100lvh) {
     .hero-slider {
       height: 100lvh;
     }
-  }
-  .hero-slider {
-    height: calc(var(--vh, 1vh) * 100);
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
   }
 }
 

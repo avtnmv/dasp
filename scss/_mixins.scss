@@ -55,16 +55,15 @@
   }
 }
 
-@mixin full-height {
-  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+@mixin full-height-stable {
+  /* Фоллбек */
   min-height: -webkit-fill-available;
 
-  height: 100svh;
-  @supports (height: 100dvh) { height: 100dvh; }
-  @supports (height: 100lvh) { height: 100lvh; }
+  /* Стабильный viewport */
+  height: 100svh; // stable viewport height
 
-  height: calc(var(--vh, 1vh) * 100);
-
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
+  /* На всякий случай large viewport */
+  @supports (height: 100lvh) {
+    height: 100lvh;
+  }
 }
