@@ -4,21 +4,13 @@
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 100vh;
-        
-    @include mobile {
-        @include full-height-100vh;
-      }
+    min-height: 100vh;
 }
 
 .slider__container {
     position: relative;
     width: 100%;
-    height: 100vh;
-
-    @include mobile {
-        @include full-height-100vh;
-      }
+    height: 100%;
 }
 
 .slider__slide {
