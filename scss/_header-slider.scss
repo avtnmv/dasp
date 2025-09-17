@@ -13,39 +13,34 @@
         max-height: 100vh;
     }
     
+    /* iOS Safari - учитывает адресную строку */
     @supports (-webkit-touch-callout: none) {
         @include mobile {
-          height: 90vh;
-          min-height: 90vh;
-          max-height: 90vh;
+            height: 90vh;
+            min-height: 90vh;
+            max-height: 90vh;
         }
-      }
-      
-      // Chrome mobile (компромиссное значение 99vh)
-      @media screen and (-webkit-min-device-pixel-ratio:0) {
+    }
+    
+    /* Chrome mobile - компромиссное значение */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
         @supports not (-webkit-touch-callout: none) {
-          @include mobile {
-            height: 96vh;
-            min-height: 96vh;
-            max-height: 96vh;
-          }
+            @include mobile {
+                height: 99vh;
+                min-height: 99vh;
+                max-height: 99vh;
+            }
         }
-      }
-      
-      // Firefox mobile (нужна честная высота 100vh)
-      @-moz-document url-prefix() {
+    }
+    
+    /* Firefox mobile - стандартная высота */
+    @media screen and (min--moz-device-pixel-ratio:0) {
         @include mobile {
-          height: 100vh;
-          min-height: 100vh;
-          max-height: 100vh;
+            height: 100vh;
+            min-height: 100vh;
+            max-height: 100vh;
         }
-      }
-      
-      @include mobile {
-        height: 100vh;
-        min-height: 100vh;
-        max-height: 100vh;
-      }
+    }
 }
 
 .slider__container {

@@ -356,6 +356,9 @@ body {
     max-height: 100vh;
   }
 }
+.hero-slider {
+  /* iOS Safari - учитывает адресную строку */
+}
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
     .hero-slider {
@@ -365,27 +368,24 @@ body {
     }
   }
 }
+.hero-slider {
+  /* Chrome mobile - компромиссное значение */
+}
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @supports not (-webkit-touch-callout: none) {
     @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
       .hero-slider {
-        height: 96vh;
-        min-height: 96vh;
-        max-height: 96vh;
+        height: 99vh;
+        min-height: 99vh;
+        max-height: 99vh;
       }
     }
   }
 }
-@-moz-document url-prefix() {
-  @media (max-width: 767px) {
-    .hero-slider {
-      height: 100vh;
-      min-height: 100vh;
-      max-height: 100vh;
-    }
-  }
+.hero-slider {
+  /* Firefox mobile - стандартная высота */
 }
-@media (max-width: 767px) {
+@media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 767px) {
   .hero-slider {
     height: 100vh;
     min-height: 100vh;
