@@ -101,9 +101,14 @@
   display: flex;
   align-items: center;
   gap: 24px;
+  transition: all 0.3s ease-in-out;
 }
 .header__nav a {
   color: #ffffff;
+  transition: all 0.3s ease-in;
+}
+.header__nav a:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .header__nav {
@@ -300,7 +305,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  /* iOS */
+  /* iOS Safari */
 }
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
@@ -310,13 +315,13 @@
   }
 }
 .hero-slider {
-  /* Chrome */
+  /* Chrome, Edge (Blink) */
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @supports not (-webkit-touch-callout: none) {
     @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
       .hero-slider {
-        height: 99vh;
+        height: 97vh;
       }
     }
   }
@@ -324,9 +329,11 @@
 .hero-slider {
   /* Firefox */
 }
-@media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 767px) {
-  .hero-slider {
-    height: 100vh;
+@-moz-document url-prefix() {
+  @media (max-width: 767px) {
+    .hero-slider {
+      height: 100vh;
+    }
   }
 }
 
@@ -569,7 +576,7 @@
   padding: 20px 24px;
   font-size: 24px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1250px) {
   .slider__cta-button {
@@ -579,8 +586,8 @@
   }
 }
 .slider__cta-button:hover {
-  background: #ffffff;
-  color: #080808;
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
 }
 
 .about-us {
@@ -753,8 +760,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.cards__wrapper:hover .cards__item::after {
-  opacity: 1;
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .cards__wrapper:hover .cards__item::after {
+    opacity: 1;
+  }
 }
 @media (max-width: 767px) {
   .cards__wrapper {
@@ -798,8 +807,10 @@
   transition: opacity 0.3s ease;
   z-index: 1;
 }
-.cards__wrapper:hover .cards__item::before {
-  transform: scale(1.1);
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .cards__wrapper:hover .cards__item::before {
+    transform: scale(1.1);
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .cards__item {
@@ -846,8 +857,10 @@
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.cards__wrapper:hover .cards__title {
-  opacity: 1;
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .cards__wrapper:hover .cards__title {
+    opacity: 1;
+  }
 }
 @media (max-width: 767px) {
   .cards__title {
@@ -866,7 +879,6 @@
 }
 @media (max-width: 767px) {
   .cards__footer {
-    margin-top: 12px;
     gap: 12px;
   }
 }
