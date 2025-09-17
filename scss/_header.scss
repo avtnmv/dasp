@@ -73,7 +73,9 @@
     top: 0;
     right: 0;
     width: 100vw;
-    height: 100dvh; 
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
     background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     padding: 95px 24px 24px;
@@ -83,6 +85,22 @@
     transition: all 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
+    
+    /* iOS Safari - учитывает адресную строку */
+    @supports (-webkit-touch-callout: none) {
+        height: 90vh;
+        min-height: 90vh;
+        max-height: 90vh;
+    }
+    
+    /* Chrome mobile - компромиссное значение */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        @supports not (-webkit-touch-callout: none) {
+            height: 99vh;
+            min-height: 99vh;
+            max-height: 99vh;
+        }
+    }
     
     
     &.active {

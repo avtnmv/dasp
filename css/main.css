@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2");
@@ -12,6 +13,12 @@
   font-style: normal;
   font-display: swap;
 }
+html {
+  /* Предотвращает изменение viewport при скролле на мобилках */
+  height: 100%;
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -21,6 +28,16 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+  /* Предотвращает зум при двойном тапе на мобилках */
+  touch-action: manipulation;
 }
 
 .container {
@@ -134,7 +151,9 @@
   top: 0;
   right: 0;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   padding: 95px 24px 24px;
@@ -144,6 +163,26 @@
   transition: all 0.3s ease;
   z-index: 1000;
   overflow-y: auto;
+  /* iOS Safari - учитывает адресную строку */
+}
+@supports (-webkit-touch-callout: none) {
+  .header__mobile-dropdown {
+    height: 90vh;
+    min-height: 90vh;
+    max-height: 90vh;
+  }
+}
+.header__mobile-dropdown {
+  /* Chrome mobile - компромиссное значение */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @supports not (-webkit-touch-callout: none) {
+    .header__mobile-dropdown {
+      height: 99vh;
+      min-height: 99vh;
+      max-height: 99vh;
+    }
+  }
 }
 .header__mobile-dropdown.active {
   opacity: 1;
@@ -308,7 +347,50 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 100dvh;
+  /* Фиксированная высота для всех мобильных браузеров */
+}
+@media (max-width: 767px) {
+  .hero-slider {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+}
+.hero-slider {
+  /* iOS Safari - учитывает адресную строку */
+}
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    .hero-slider {
+      height: 90vh;
+      min-height: 90vh;
+      max-height: 90vh;
+    }
+  }
+}
+.hero-slider {
+  /* Chrome mobile - компромиссное значение */
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @supports not (-webkit-touch-callout: none) {
+    @media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
+      .hero-slider {
+        height: 99vh;
+        min-height: 99vh;
+        max-height: 99vh;
+      }
+    }
+  }
+}
+.hero-slider {
+  /* Firefox mobile - стандартная высота */
+}
+@media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 767px) {
+  .hero-slider {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .slider__container {

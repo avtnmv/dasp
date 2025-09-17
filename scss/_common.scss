@@ -6,6 +6,12 @@
 @include font-face('SportingGrotesque', '../fonts/SportingGrotesque.woff2');
 
 
+html {
+  /* Предотвращает изменение viewport при скролле на мобилках */
+  height: 100%;
+  overflow-x: hidden;
+}
+
 *,
 *::before,
 *::after {
@@ -15,6 +21,17 @@
   margin: 0;
   padding: 0;
   font-family: $font-main;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-main;
+  height: 100%;
+  overflow-x: hidden;
+  
+  /* Предотвращает зум при двойном тапе на мобилках */
+  touch-action: manipulation;
 }
 
 .container {
