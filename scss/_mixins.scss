@@ -25,7 +25,6 @@
   }
 }
 
-// Контейнер
 @mixin container {
   max-width: $container-width;
   margin: 0 auto;
@@ -54,4 +53,18 @@
     font-style: $style;
     font-display: swap;
   }
+}
+
+@mixin full-height {
+  height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  min-height: -webkit-fill-available;
+
+  height: 100svh;
+  @supports (height: 100dvh) { height: 100dvh; }
+  @supports (height: 100lvh) { height: 100lvh; }
+
+  height: calc(var(--vh, 1vh) * 100);
+
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
