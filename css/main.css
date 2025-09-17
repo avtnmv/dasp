@@ -13,12 +13,6 @@
   font-style: normal;
   font-display: swap;
 }
-html {
-  /* Предотвращает изменение viewport при скролле на мобилках */
-  height: 100%;
-  overflow-x: hidden;
-}
-
 *,
 *::before,
 *::after {
@@ -34,10 +28,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
-  height: 100%;
-  overflow-x: hidden;
-  /* Предотвращает зум при двойном тапе на мобилках */
-  touch-action: manipulation;
 }
 
 .container {
@@ -86,11 +76,46 @@ body {
 }
 
 .header__top {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+.header__top .container {
+  transition: padding 0.3s ease;
+}
+.header__top .header__logo svg {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+.header__top.scrolled {
+  background-color: #1a1a1a;
+}
+.header__top.compact {
+  background-color: #ffffff;
+}
+.header__top.compact .container {
+  padding: 24px 40px;
+}
+@media (max-width: 767px) {
+  .header__top.compact .container {
+    padding: 24px;
+  }
+  .header__top.compact .header__logo svg {
+    width: 97px;
+    height: 37px;
+  }
+}
+.header__top.compact .header__logo svg {
+  width: 97px;
+  height: 37px;
+  fill: #080808;
+  color: #080808;
+}
+.header__top.compact .header__mobile-menu span {
+  background-color: #080808;
 }
 
 .header__container {
@@ -144,6 +169,9 @@ body {
   .header__mobile-menu {
     display: block;
   }
+}
+.header__top.compact .header__mobile-menu {
+  display: block;
 }
 
 .header__mobile-dropdown {

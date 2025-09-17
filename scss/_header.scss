@@ -7,12 +7,58 @@
 }
 
 .header__top {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
+    background-color: transparent;
+    transition: background-color 0.3s ease, 
+                backdrop-filter 0.3s ease, 
+                box-shadow 0.3s ease;
+  
+    .container {
+        transition: padding 0.3s ease;
+    }
+  
+    .header__logo svg {
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+  
+    &.scrolled {
+        background-color: $color-header-bg;
+    }
+  
+    &.compact {
+        background-color: $color-white;
+        
+        .container {
+            padding: 24px 40px;
+        }
+
+        @include mobile {
+            .container {
+                padding: 24px;
+            }
+
+            .header__logo svg {
+                width: 97px;
+                height: 37px;
+            }
+        }
+        .header__logo svg {
+            width: 97px;
+            height: 37px;
+            fill: $color-black;
+            color: $color-black;
+        }
+
+        .header__mobile-menu span {
+            background-color: $color-black;
+        }
+    }
 }
+  
 
 .header__container {
     display: flex;
@@ -64,6 +110,11 @@
     position: relative;
     
     @include mobile {
+        display: block;
+    }
+    
+    // Показываем на десктопе в компактном режиме
+    .header__top.compact & {
         display: block;
     }
 }
