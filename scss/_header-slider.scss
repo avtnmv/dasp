@@ -14,7 +14,11 @@
 .slider__container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+
+    @include mobile {
+        @include full-height-100vh;
+      }
 }
 
 .slider__slide {
