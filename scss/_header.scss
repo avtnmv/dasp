@@ -43,17 +43,20 @@
 
     a{
         color: $color-white;
-        transition: all 0.3s ease-in;
-
-        &:hover {
-            opacity: 0.7;
-        }
     }
     
     @include mobile {
         display: none;
     }
 
+}
+
+.header__nav-item {
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .header__mobile-menu {

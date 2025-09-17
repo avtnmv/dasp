@@ -105,15 +105,18 @@
 }
 .header__nav a {
   color: #ffffff;
-  transition: all 0.3s ease-in;
-}
-.header__nav a:hover {
-  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .header__nav {
     display: none;
   }
+}
+
+.header__nav-item {
+  transition: all 0.3s ease-in-out;
+}
+.header__nav-item:hover {
+  opacity: 0.7;
 }
 
 .header__mobile-menu {
