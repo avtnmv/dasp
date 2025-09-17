@@ -113,7 +113,6 @@
         display: block;
     }
     
-    // Показываем на десктопе в компактном режиме
     .header__top.compact & {
         display: block;
     }
@@ -137,14 +136,12 @@
     z-index: 1000;
     overflow-y: auto;
     
-    /* iOS Safari - учитывает адресную строку */
     @supports (-webkit-touch-callout: none) {
         height: 90vh;
         min-height: 90vh;
         max-height: 90vh;
     }
     
-    /* Chrome mobile - компромиссное значение */
     @media screen and (-webkit-min-device-pixel-ratio:0) {
         @supports not (-webkit-touch-callout: none) {
             height: 99vh;

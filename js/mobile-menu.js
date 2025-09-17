@@ -1,65 +1,38 @@
-// Поп-ап меню проектов и мобильное бургер-меню
-document.addEventListener('DOMContentLoaded', function() {
-    const projectsMenuToggle = document.getElementById('projectsMenuToggle');
-    const hamburger = document.getElementById('hamburger');
-    const projectsDropdown = document.getElementById('projectsDropdown');
+// Универсальная функция для меню
+function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
+    const toggle = document.getElementById(toggleId);
+    const burger = document.getElementById(burgerId);
+    const dropdown = document.getElementById(dropdownId);
     
-    // Мобильное бургер-меню
-    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-    const mobileBurger = document.getElementById('mobileBurger');
-    const mobileDropdown = document.getElementById('mobileDropdown');
-
-    // Поп-ап меню проектов (десктоп)
-    if (projectsMenuToggle && hamburger && projectsDropdown) {
-        projectsMenuToggle.addEventListener('click', function(event) {
-            event.preventDefault();
-            // Переключаем классы для анимации
-            hamburger.classList.toggle('active');
-            projectsDropdown.classList.toggle('active');
-        });
-
-        // Закрываем меню при клике вне его
-        document.addEventListener('click', function(event) {
-            if (!projectsMenuToggle.contains(event.target) && !projectsDropdown.contains(event.target)) {
-                hamburger.classList.remove('active');
-                projectsDropdown.classList.remove('active');
-            }
-        });
-
-        // Закрываем меню при клике на пункт меню
-        const dropdownItems = projectsDropdown.querySelectorAll('.header__dropdown-item a');
-        dropdownItems.forEach(item => {
-            item.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                projectsDropdown.classList.remove('active');
-            });
-        });
-    }
+    if (!toggle || !burger || !dropdown) return;
     
-    // Мобильное бургер-меню
-    if (mobileMenuToggle && mobileBurger && mobileDropdown) {
-        mobileMenuToggle.addEventListener('click', function(event) {
-            event.preventDefault();
-            // Переключаем классы для анимации
-            mobileBurger.classList.toggle('active');
-            mobileDropdown.classList.toggle('active');
+    // Переключение меню
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        burger.classList.toggle('active');
+        dropdown.classList.toggle('active');
+    });
+    
+    // Закрытие при клике вне меню
+    document.addEventListener('click', (e) => {
+        if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            burger.classList.remove('active');
+            dropdown.classList.remove('active');
+        }
+    });
+    
+    // Закрытие при клике на пункт меню
+    const closeItems = dropdown.querySelectorAll(closeSelector);
+    closeItems.forEach(item => {
+        item.addEventListener('click', () => {
+            burger.classList.remove('active');
+            dropdown.classList.remove('active');
         });
+    });
+}
 
-        // Закрываем мобильное меню при клике вне его
-        document.addEventListener('click', function(event) {
-            if (!mobileMenuToggle.contains(event.target) && !mobileDropdown.contains(event.target)) {
-                mobileBurger.classList.remove('active');
-                mobileDropdown.classList.remove('active');
-            }
-        });
-
-        // Закрываем мобильное меню при клике на пункт меню
-        const mobileNavItems = mobileDropdown.querySelectorAll('.header__mobile-nav-item');
-        mobileNavItems.forEach(item => {
-            item.addEventListener('click', function() {
-                mobileBurger.classList.remove('active');
-                mobileDropdown.classList.remove('active');
-            });
-        });
-    }
+// Инициализация меню
+document.addEventListener('DOMContentLoaded', () => {
+    initMenu('projectsMenuToggle', 'hamburger', 'projectsDropdown', '.header__dropdown-item a');
+    initMenu('mobileMenuToggle', 'mobileBurger', 'mobileDropdown', '.header__mobile-nav-item');
 });

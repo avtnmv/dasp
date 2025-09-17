@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2");
@@ -191,7 +190,6 @@ body {
   transition: all 0.3s ease;
   z-index: 1000;
   overflow-y: auto;
-  /* iOS Safari - учитывает адресную строку */
 }
 @supports (-webkit-touch-callout: none) {
   .header__mobile-dropdown {
@@ -199,9 +197,6 @@ body {
     min-height: 90vh;
     max-height: 90vh;
   }
-}
-.header__mobile-dropdown {
-  /* Chrome mobile - компромиссное значение */
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @supports not (-webkit-touch-callout: none) {
@@ -375,7 +370,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* Фиксированная высота для всех мобильных браузеров */
 }
 @media (max-width: 767px) {
   .hero-slider {
@@ -383,9 +377,6 @@ body {
     min-height: 100vh;
     max-height: 100vh;
   }
-}
-.hero-slider {
-  /* iOS Safari - учитывает адресную строку */
 }
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 767px) {
@@ -395,9 +386,6 @@ body {
       max-height: 90vh;
     }
   }
-}
-.hero-slider {
-  /* Chrome mobile - компромиссное значение */
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @supports not (-webkit-touch-callout: none) {
@@ -409,9 +397,6 @@ body {
       }
     }
   }
-}
-.hero-slider {
-  /* Firefox mobile - стандартная высота */
 }
 @media screen and (min--moz-device-pixel-ratio: 0) and (max-width: 767px) {
   .hero-slider {
@@ -693,12 +678,12 @@ body {
     padding: 0 24px;
   }
 }
-@media (min-width: 1681px) {
+@media (min-width: 1024px) and (max-width: 1680px) {
   .about-us {
     padding: 0 40px;
   }
 }
-@media (min-width: 1024px) and (max-width: 1680px) {
+@media (min-width: 1681px) {
   .about-us {
     padding: 0 40px;
   }
