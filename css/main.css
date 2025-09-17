@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2");
@@ -299,7 +300,24 @@
 .hero-slider {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Fallback для старых браузеров */
+  height: calc(var(--vh, 1vh) * 100); /* Фиксированная высота */
+  /* Дополнительная поддержка для iOS Safari */
+}
+@supports (-webkit-touch-callout: none) {
+  .hero-slider {
+    height: -webkit-fill-available;
+  }
+}
+.hero-slider {
+  /* Фиксированная высота для мобильных устройств */
+}
+@media (max-width: 768px) {
+  .hero-slider {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
 }
 
 .slider__container {
