@@ -118,6 +118,10 @@
     &:hover{
         opacity: 0.7;
     }
+
+    @include mobile {
+        max-width: 100%;
+    }
 }
 // End About us section
 
