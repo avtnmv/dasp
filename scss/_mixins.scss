@@ -27,7 +27,7 @@
 @mixin container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 40px;
+  padding: 24px 40px;
 
   @media (max-width: 1250px) {
     padding: 24px;
