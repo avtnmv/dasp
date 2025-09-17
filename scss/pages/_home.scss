@@ -20,9 +20,13 @@
         padding: 0 24px;
     }
 
+    @include large-desktop {
+        padding: 0 40px;
+    }
+
     @include desktop {
         padding: 0 40px;
-}
+    }
 }
 
 .about-us__title {
@@ -276,7 +280,6 @@
 .cards__footer {
     display: flex;
     align-items: center;
-    margin-top: 16px;
     gap: 6px;
 
     @include mobile {

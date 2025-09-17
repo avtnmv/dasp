@@ -569,6 +569,11 @@
     padding: 0 24px;
   }
 }
+@media (min-width: 1681px) {
+  .about-us {
+    padding: 0 40px;
+  }
+}
 @media (min-width: 1024px) and (max-width: 1680px) {
   .about-us {
     padding: 0 40px;
@@ -819,7 +824,6 @@
 .cards__footer {
   display: flex;
   align-items: center;
-  margin-top: 16px;
   gap: 6px;
 }
 @media (max-width: 767px) {
