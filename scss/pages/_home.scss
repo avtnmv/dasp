@@ -1,8 +1,313 @@
-// =============================================================================
-// ГЛАВНАЯ СТРАНИЦА
-// =============================================================================
-
 @use '../variables' as *;
 @use '../mixins' as *;
 
-// Ваши стили для главной страницы здесь
+
+// About us section
+.about-us{
+    max-width: var(--container-width);
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    @include tablet {
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 24px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+}
+}
+
+.about-us__title {
+    font-size: 16px;
+    color: $color-gray;
+
+}
+
+.about-us__description{
+    font-size: clamp(24px, 4vw, 42px);
+    text-transform: uppercase;
+    font-family: $font-title;
+}
+
+.about-us__content{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+
+    @include tablet {
+        gap: 64px;
+    }
+
+    @include mobile {
+        gap: 32px;
+    }
+}
+
+.about-us__text{
+    max-width: 670px;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include large-desktop {
+        max-width: 910px;
+}
+}
+
+.about-us__text-item{
+    font-size: 16px;
+    color: $color-gray;
+    max-width: 290px;
+    width: 100%;
+
+    @include tablet {
+        max-width: 100%;
+    }
+
+    @include mobile {
+        max-width: 100%;
+    }
+}
+
+.about-us__text-item-2{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.about-us__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $color-black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid $color-black;
+    padding: 10px 20px;
+    max-width: 290px;
+    width: 100%;
+    height: 65px;
+
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+// End About us section
+
+// Cards section
+.cards {
+    max-width: var(--container-width);
+    padding: 0 40px;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include mobile {
+        padding: 0 20px;
+    }
+}
+
+.cards__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+.cards__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        .cards__item {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    @include mobile {
+        gap: 12px;
+    }
+}
+
+.cards__item {
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+        z-index: 0;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+    }
+
+    .cards__wrapper:hover & {
+        &::before {
+            transform: scale(1.1);
+        }
+    }
+
+    @include tablet {
+        max-width: 100%;
+    }
+
+    @include mobile {
+        max-width: 100%;
+    }
+
+    .cards__wrapper:nth-child(1) &::before {
+        background-image: url('../img/home-page/cards-1.webp');
+    }
+
+    .cards__wrapper:nth-child(2) &::before {
+        background-image: url('../img/home-page/cards-2.webp');
+    }
+
+    .cards__wrapper:nth-child(3) &::before {
+        background-image: url('../img/home-page/cards-3.webp');
+    }
+
+    .cards__wrapper:nth-child(4) &::before {
+        background-image: url('../img/home-page/cards-4.webp');
+    }
+
+    .cards__wrapper:nth-child(5) &::before {
+        background-image: url('../img/home-page/cards-5.webp');
+    }
+
+    .cards__wrapper:nth-child(6) &::before {
+        background-image: url('../img/home-page/cards-6.webp');
+    }
+}
+
+.cards__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    margin: 0;
+    font-family: $font-title;
+    font-size: clamp(24px, 3vw, 48px);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    .cards__wrapper:hover & {
+        opacity: 1;
+    }
+
+    @include mobile {
+        font-size: clamp(16px, 2vw, 20px);
+    }
+}
+
+.cards__subtitle{
+    text-transform: uppercase;
+}
+
+.cards__footer {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    gap: 6px;
+
+    @include mobile {
+        margin-top: 12px;
+        gap: 12px;
+    }
+}
+
+.cards__arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    svg {
+        width: 6px;
+        height: 9px;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @include mobile {
+        svg {
+            width: 5px;
+            height: 8px;
+        }
+    }
+}
+
+// End Cards section
+

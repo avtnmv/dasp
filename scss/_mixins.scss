@@ -14,7 +14,7 @@
 }
 
 @mixin desktop {
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
     @content;
   }
 }
@@ -43,6 +43,8 @@
     padding: 24px;
   }
 }
+
+
 
 @mixin font-face($name, $path, $weight: normal, $style: normal) {
   @font-face {
