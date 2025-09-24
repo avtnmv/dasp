@@ -29,17 +29,14 @@
   margin: 0 auto;
   padding: 24px 40px;
 
-  @media (max-width: 1250px) {
+  @include tablet {
     padding: 24px;
   }
 
-  @media (max-width: 1250px) {
+  @include mobile {
     padding: 24px;
   }
-  
-  @media (max-width: 1250px) {
-    padding: 24px;
-  }
+
 }
 
 @mixin font-face($name, $path, $weight: normal, $style: normal) {

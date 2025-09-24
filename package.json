@@ -20,5 +20,8 @@
     "wordpress"
   ],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "swiper": "^12.0.1"
+  }
 }

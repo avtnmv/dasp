@@ -4,7 +4,7 @@
 
 // About us section
 .about-us{
-    max-width: var(--container-width);
+    max-width: 1840px;
     display: flex;
     justify-content: space-between;
     gap: 32px;
@@ -29,10 +29,9 @@
     }
 }
 
-.about-us__title {
+.about-us__title{
     font-size: 16px;
     color: $color-gray;
-
 }
 
 .about-us__description{
@@ -127,7 +126,7 @@
 
 // Cards section
 .cards {
-    max-width: var(--container-width);
+    max-width: 1840px;
     padding: 0 40px;
 
     @include tablet {
@@ -321,4 +320,499 @@
     }
 }
 // End Cards section
+
+
+//Cases section
+.cases {
+    max-width: 1840px;
+    padding: 0 40px;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+    @include mobile {
+        padding: 0 24px;
+    }
+}
+
+.cases__title{
+    font-size: 16px;
+    color: $color-gray;
+    max-width: 600px;
+    width: 100%;
+}
+
+.cases__description{
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+
+    font-size: clamp(24px, 4vw, 39px);
+    text-transform: uppercase;
+    font-family: $font-title;
+
+    margin-bottom: 120px;
+
+    @include tablet {
+        margin-bottom: 64px;
+    }
+    @include mobile {
+        margin-bottom: 32px;
+        text-align: left;
+    }
+}
+
+.cases__spacer{
+    max-width: 600px;
+    width: 100%;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.cases__container {
+    display: flex;
+    @include large-desktop {
+        margin-bottom: 16px;
+    }
+
+    justify-content: center;
+
+    @include tablet {
+        margin-bottom: 64px;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @include large-desktop {
+        margin-bottom: 120px;
+    }
+}
+
+.cases__slider {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 0px;
+
+    .swiper {
+        overflow: hidden;
+        position: relative;
+    }
+  
+     .swiper-slide {
+       width: 600px;
+       height: 300px;
+       position: relative;
+       
+       transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+       transform: scale(0.8);
+       
+       &::after {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+         filter: saturate(0);
+         z-index: 1;
+         opacity: 1;
+         transition: opacity 0.3s ease;
+       }
+   
+       &.swiper-slide-prev,
+       &.swiper-slide-next {
+         transform: scale(0.9);
+         opacity: 0.75;
+         filter: brightness(0.9) saturate(0);
+         z-index: 1;
+         
+         &::after {
+           opacity: 1;
+         }
+       }
+   
+       &.swiper-slide-active {
+         transform: scale(1.1);
+         opacity: 1;
+         filter: brightness(1.05) saturate(1);
+         z-index: 2;
+         
+         &::after {
+           opacity: 0;
+         }
+       }
+     }
+  }
+
+.cases__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cases__projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    @include mobile {
+        margin-top: 32px;
+    }
+    @include tablet {
+        margin-top: 48px;
+    }
+    
+    @include desktop {
+        margin-top: 48px;
+    }
+
+    @include large-desktop {
+        margin-top: 64px;
+    }
+}
+
+.cases__projects-title {
+    font-family: $font-main;
+    font-size: 16px;
+    color: $color-black;
+}
+
+.cases__projects-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $color-black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid $color-black;
+    padding: 10px 20px;
+    max-width: 262px;
+    width: 100%;
+    height: 64px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+// End Cases section
+
+// Why we section
+.why-we {
+    max-width: 1840px;
+    padding: 0 40px;
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include mobile {
+        padding: 0 24px;
+    }
+}
+
+.why-we__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.why-we__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 64px;
+        align-items: flex-start;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 48px;
+        align-items: flex-start;
+    }
+}
+
+.why-we__content {
+    flex: 0 0 460px;
+    max-width: 460px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @include tablet {
+        flex: none;
+        max-width: 100%;
+    }
+
+    @include mobile {
+        flex: none;
+        max-width: 100%;
+    }
+}
+
+.why-we__title {
+    font-size: 16px;
+    color: $color-gray;
+    margin: 0;
+}
+
+.why-we__description {
+    font-size: clamp(24px, 4vw, 42px);
+    text-transform: uppercase;
+    font-family: $font-title;
+    color: $color-black;
+    margin: 0;
+}
+
+.why-we__blocks-grid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 900px;
+
+    @include tablet {
+        gap: 32px;
+        max-width: 100%;
+    }
+
+    @include mobile {
+        gap: 24px;
+        max-width: 100%;
+    }
+}
+
+.why-we__blocks-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    @include tablet {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &--first {
+        justify-content: flex-end;
+        
+        @include tablet {
+            justify-content: stretch;
+        }
+
+        @include mobile {
+            justify-content: stretch;
+        }
+    }
+
+    &--second {
+        justify-content: space-between;
+        
+        @include tablet {
+            justify-content: stretch;
+        }
+
+        @include mobile {
+            justify-content: stretch;
+        }
+    }
+
+    &--third {
+        justify-content: space-between;
+        
+        @include tablet {
+            justify-content: stretch;
+        }
+
+        @include mobile {
+            justify-content: stretch;
+        }
+    }
+}
+
+.why-we__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet {
+        gap: 20px;
+    }
+
+    @include mobile {
+        gap: 20px;
+    }
+
+    &--01 {
+        flex-direction: row;
+        max-width: 900px;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: column;
+            max-width: 100%;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            max-width: 100%;
+        }
+    }
+
+    &--02 {
+        max-width: 400px;
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &--03 {
+        max-width: 440px;
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &--04 {
+        flex-direction: row;
+        max-width: 465px;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: column;
+            max-width: 100%;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            max-width: 100%;
+        }
+    }
+
+    &--05 {
+        max-width: 290px;
+        width: 100%;
+
+        @include tablet {
+            max-width: 100%;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+}
+
+.why-we__image {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+
+    .why-we__block--01 & {
+        max-width: 100%;
+    }
+
+    @include tablet {
+        max-width: 100%;
+        min-height: 250px;
+    }
+
+    @include mobile {
+        max-width: 100%;
+        min-height: 200px;
+    }
+}
+
+.why-we__img {
+    width: 100%;
+    max-height: 230px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-we__info {
+    flex: 1;
+    max-width: 290px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    @include mobile {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.why-we__info-01 {
+    max-width: 440px;
+}
+
+
+.why-we__number {
+    font-family: $font-main;
+    font-size: 16px;
+    color: $color-gray;
+    margin-bottom: 20px;
+}
+
+.why-we__block-title {
+    font-family: $font-main;
+    font-size: 20px;
+    color: $color-black;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+.why-we__block-description {
+    font-size: 16px;
+    color: $color-gray;
+    line-height: 1.6;
+    margin: 0;
+}
+// End Why we section
+
 

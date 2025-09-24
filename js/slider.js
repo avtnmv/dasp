@@ -1,19 +1,13 @@
-// Слайдер проектов - идеальная синхронизация
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slider__slide');
     const navItems = document.querySelectorAll('.slider__nav-item');
     
-    if (slides.length === 0 || navItems.length === 0) {
-        console.log('Слайдер не найден');
-        return;
-    }
     
     let currentSlide = 0;
     let isAutoPlaying = true;
     let progressTimer = null;
-    const slideDuration = 5000; // 5 секунд
+    const slideDuration = 5000;
     
-    // Данные для каждого слайда
     const slideData = [
         { title: "Dellicia", category: "Ресторан" },
         { title: "Beter Live", category: "Офіс" },
@@ -22,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const commonSubtitle = "Продуманий комерційний простір з фокусом на результат і комфорт";
 
-    // Функция для обновления контента слайда
     function updateSlideContent(index) {
         const subtitle = document.querySelector('.slider__subtitle');
         const title = document.querySelector('.slider__title');
@@ -31,7 +24,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (subtitle && title && category) {
             subtitle.textContent = commonSubtitle;
             
-            // Обновляем заголовок, сохраняя SVG
             const svgElement = title.querySelector('svg');
             title.innerHTML = slideData[index].title;
             if (svgElement) {
@@ -42,31 +34,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Функция для показа конкретного слайда
     function showSlide(index) {
-        // Убираем активный класс со всех элементов
         slides.forEach(slide => slide.classList.remove('active'));
         navItems.forEach(item => item.classList.remove('active'));
         
-        // Добавляем активный класс к текущему слайду
         if (slides[index]) slides[index].classList.add('active');
         if (navItems[index]) navItems[index].classList.add('active');
         
-        // Обновляем контент
         updateSlideContent(index);
         
         currentSlide = index;
     }
 
-    // Функция для перехода к следующему слайду
     function nextSlide() {
         const nextIndex = (currentSlide + 1) % slides.length;
         showSlide(nextIndex);
     }
 
-    // Функция для запуска прогресс-бара
     function startProgress() {
-        // Останавливаем предыдущий прогресс
         stopProgress();
         
         const activeNavItem = document.querySelector('.slider__nav-item.active');
@@ -74,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!progressBar) return;
         
-        // Сбрасываем прогресс-бар
         progressBar.style.width = '0%';
         progressBar.style.transition = 'width 0.1s linear';
         
@@ -90,10 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 progressBar.style.width = '100%';
                 stopProgress();
                 
-                // Переключаем слайд только если автовоспроизведение включено
                 if (isAutoPlaying) {
                     nextSlide();
-                    // Запускаем прогресс для нового слайда
                     setTimeout(() => startProgress(), 100);
                 }
             } else {
@@ -102,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16); // ~60fps
     }
 
-    // Функция для остановки прогресс-бара
     function stopProgress() {
         if (progressTimer) {
             clearInterval(progressTimer);
@@ -110,37 +91,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Функция для запуска автовоспроизведения
     function startAutoPlay() {
         isAutoPlaying = true;
         startProgress();
     }
 
-    // Функция для остановки автовоспроизведения
     function stopAutoPlay() {
         isAutoPlaying = false;
         stopProgress();
     }
 
-    // Обработчики кликов для навигации
     navItems.forEach((item, index) => {
         item.addEventListener('click', function() {
-            // Останавливаем автовоспроизведение
             stopAutoPlay();
             
-            // Переключаем на выбранный слайд
             showSlide(index);
             
-            // Возобновляем автовоспроизведение через небольшую задержку
             setTimeout(() => {
                 startAutoPlay();
             }, 100);
         });
     });
 
-    // Инициализация
     showSlide(0);
     startAutoPlay();
-    
-    console.log('Слайдер инициализирован успешно');
 });

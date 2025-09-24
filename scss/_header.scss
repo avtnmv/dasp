@@ -32,10 +32,6 @@
     &.compact {
         background-color: $color-white;
         
-        .container {
-            padding: 24px 40px;
-        }
-
         @include mobile {
             .container {
                 padding: 24px;
@@ -56,6 +52,7 @@
         .header__mobile-menu span {
             background-color: $color-black;
         }
+        
     }
 }
   
@@ -68,7 +65,6 @@
 
 .header__logo {
     position: relative;
-    z-index: 1001;
     
     svg {
         width: 130px;
@@ -328,3 +324,18 @@
         }
     }
 }
+
+.header__mobile-logo {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 1001;
+    
+    svg {
+        width: 97px !important;
+        height: 37px !important;
+        fill: $color-white !important;
+        color: $color-white !important;
+    }
+}
+

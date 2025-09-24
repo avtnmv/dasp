@@ -34,6 +34,7 @@
     <link rel="manifest" href="./favicon/site.webmanifest">
 
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header class="header">
@@ -80,15 +81,16 @@
                     <a href="#contact" class="header__nav-item">Контакти</a>
                 </nav>
                 
-                <!-- Мобильное бургер-меню -->
                 <div class="header__mobile-menu" id="mobileMenuToggle">
                     <div class="header__mobile-burger" id="mobileBurger">
                         <span></span>
                         <span></span>
                     </div>
                     
-                    <!-- Выпадающее мобильное меню -->
                     <div class="header__mobile-dropdown" id="mobileDropdown">
+                        <div class="header__mobile-logo">
+                            <svg width="130" height="49" viewBox="0 0 130 49" fill="white" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M0 .505h12.82q4.405 0 7.883 1.579 3.48 1.578 5.466 4.504 1.988 2.926 1.988 6.848 0 3.89-1.988 6.816t-5.466 4.504-7.883 1.58H0zm10.733 22.173q5.597 0 8.447-2.377 2.848-2.376 2.848-6.865 0-4.487-2.865-6.898t-8.43-2.41H5.896v18.55zM54.39.505H44.156l-12.157 25.83H44.97l2.48-4.314h-.01l.994-1.73.228-.395.085-.146H57.2l2.988 6.586h6.36zm-5.207 14.623-.002.004h-.518l-1.354 2.355-1.614 2.804-.995 1.73h-4.417l1.587-3.498 1.655-3.657 4.903-10.738h1.69l4.87 10.738.118.262zm27.45 10.293q-3.23-1.346-4.687-3.358-1.459-2.01-1.557-4.139l6.062-1.562a3.6 3.6 0 0 0-.033.565q0 1.43.86 2.743.862 1.313 2.767 2.16 1.904.849 4.853.849 2.947 0 4.62-.815 1.674-.814 1.674-2.277 0-1.13-.613-1.762-.614-.632-1.69-.98-1.076-.35-3.263-.816l-6.559-1.396q-3.71-.797-5.73-2.61-2.02-1.81-2.02-4.271-.001-2.094 1.324-3.84t4.008-2.81Q79.332.04 83.21.04q4.239 0 7.138 1.164t4.323 2.909 1.556 3.54l-6.061 1.662q.065-1.23-.663-2.41-.729-1.18-2.368-1.978-1.641-.798-4.157-.798-2.584 0-4.075.848-1.49.848-1.49 2.144-.001 1.164 1.175 1.878 1.176.716 3.362 1.147l7.09 1.43q4.47.897 6.343 2.826 1.87 1.928 1.871 4.72 0 2.427-1.59 4.156t-4.372 2.61q-2.783.88-6.294.88-5.135 0-8.364-1.346M105.069.505h12.124q6.56 0 9.673 1.828 3.113 1.83 3.114 5.552 0 3.723-3.114 5.551-3.114 1.83-9.673 1.829h-6.227v11.07h-5.897zm12.456 11.136q2.98 0 4.654-.914 1.673-.915 1.673-2.842t-1.673-2.843q-1.674-.914-4.654-.914h-6.559v7.513zm6.2 37.322q-5.891 0-5.892-5.045v-6.78h2.583v6.78q0 1.272.378 1.976.391.704 1.103.973.71.255 1.828.255t1.829-.255q.71-.27 1.088-.973.392-.704.392-1.976v-6.78h2.583v6.78q0 5.044-5.892 5.044M97.241 37.137h4.488l5.331 11.825h-2.789l-1.554-3.576h-6.478l-1.555 3.576H91.91zm4.75 6.575-2.136-4.916h-.74l-2.15 4.916zm-30.954-6.575h9.335v1.659h-6.798v3.44h6.385v1.659h-6.385v3.394H80.8v1.673h-9.763zm-23.23 0h5.337q2.886 0 4.258.837 1.37.837 1.37 2.542 0 2.298-3.222 2.678 1.516.198 1.968 1.416l.627 1.674q.117.335.438 1.218.335.867.437 1.096.117.227.234.364h-2.83a3 3 0 0 1-.306-.7q-.13-.456-.51-1.917l-.262-1.02q-.147-.548-.496-.852-.336-.32-1.006-.441-.672-.137-1.838-.137h-1.604v5.067h-2.595zm5.482 5.099q1.313 0 2.042-.411.744-.425.744-1.31 0-.882-.744-1.293-.73-.426-2.042-.426h-2.887v3.44zM30.3 48.963q-6.397 0-6.397-5.045v-6.78h2.805v6.78q0 1.272.41 1.976a2.2 2.2 0 0 0 1.197.973q.771.255 1.985.255t1.985-.255a2.14 2.14 0 0 0 1.182-.973q.425-.704.425-1.976v-6.78h2.805v6.78q0 5.044-6.397 5.044M0 37.137h5.427q2.95 0 4.33.807 1.393.806 1.393 2.496 0 .882-.445 1.415-.43.518-.904.73a3.6 3.6 0 0 1-.756.244q.326.046.86.274.547.213 1.038.807.504.593.504 1.598 0 1.72-1.409 2.587-1.394.867-4.315.867H0zM5.872 47.29q1.305 0 2.06-.457.772-.456.772-1.34 0-.868-.727-1.323-.727-.472-1.972-.472H2.64v3.592zm-.297-5.206q2.832 0 2.832-1.643t-2.832-1.644H2.639v3.287z"/></g><defs><clipPath id="a"><path d="M0 0h130v49H0z"/></clipPath></defs></svg>
+                        </div>
                         <div class="header__mobile-nav">
                             <a href="#" class="header__mobile-nav-item">Проєкти</a>
                             <a href="about.html" class="header__mobile-nav-item">Про нас</a>
@@ -290,6 +292,123 @@
                 </div>
             </div>
         </section>
+
+        <section class="cases section-margin">
+            <div class="cases__container">
+              <h2 class="cases__title">
+                <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 1H5.846l-2.57 9H0" stroke="#666" stroke-width="1.5"/>
+                </svg>
+                кейси
+              </h2>
+              <p class="cases__description">Кейси, які говорять краще за будь-які слова</p>
+              <div class="cases__spacer"></div>
+            </div>
+
+            <div class="cases__slider">
+                <div class="swiper cases-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide cases__slide" data-slide="0">
+                            <img src="./img/home-page/cases-slider/slide-1.webp" alt="cases-slider-1" class="cases__slide-image">
+                        </div>
+                        <div class="swiper-slide cases__slide" data-slide="1">
+                            <img src="./img/home-page/cases-slider/slide-2.webp" alt="cases-slider-2" class="cases__slide-image">
+                        </div>
+                        <div class="swiper-slide cases__slide" data-slide="2">
+                            <img src="./img/home-page/cases-slider/slide-3.webp" alt="cases-slider-3" class="cases__slide-image">
+                        </div>
+                        <div class="swiper-slide cases__slide" data-slide="3">
+                            <img src="./img/home-page/cases-slider/slide-4.webp" alt="cases-slider-4" class="cases__slide-image">
+                        </div>
+                        <div class="swiper-slide cases__slide" data-slide="4">
+                            <img src="./img/home-page/cases-slider/slide-5.webp" alt="cases-slider-5" class="cases__slide-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cases__projects">
+                <h3 class="cases__projects-title">Приклади реалізованих проектів</h3>
+                <a href="#" class="cases__projects-link">Дивитися всі
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5.5 7.09 1.91l5.58 5.59H.5v2h12.17l-5.58 5.59L8.5 16.5l8-8z" fill="#080808"/></svg>
+                </a>
+            </div>
+          </section>
+
+           <section class="why-we section-margin">
+               <div class="why-we__wrapper">
+                   <div class="why-we__container">
+                       <div class="why-we__content">
+                           <h2 class="why-we__title">
+                              <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9 1H5.846l-2.57 9H0" stroke="#666" stroke-width="1.5"/>
+                                </svg>
+
+                              чому обирають нас?
+                          </h2>
+                           <p class="why-we__description">ПРИЧИНИ, ЧОМУ БІЗНЕС ДОВІРЯЄ САМЕ НАМ</p>
+                       </div>
+                       
+                       <div class="why-we__blocks-grid">
+                           <!-- Первый ряд - только блок 01 справа -->
+                           <div class="why-we__blocks-row why-we__blocks-row--first">
+                               <div class="why-we__block why-we__block--01">
+                                   <div class="why-we__image">
+                                       <img src="./img/home-page/why-we-section/why-we1.webp" alt="Why we image" class="why-we__img">
+                                   </div>
+                                   <div class="why-we__info why-we__info-01">
+                                       <span class="why-we__number">01</span>
+                                       <h3 class="why-we__block-title">Проектуємо з турботою про людей</h3>
+                                       <p class="why-we__block-description">Створюємо простори, орієнтовані на реальні потреби людей. Кожен інтер'єр стає місцем, куди хочеться повертатися</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <!-- Второй ряд - блоки 02 и 03 -->
+                           <div class="why-we__blocks-row why-we__blocks-row--second">
+                               <div class="why-we__block why-we__block--02">
+                                   <div class="why-we__info">
+                                       <span class="why-we__number">02</span>
+                                       <h3 class="why-we__block-title">Дизайн, який збільшує прибуток</h3>
+                                       <p class="why-we__block-description">Наші проекти допомагають клієнтам залучати нових відвідувачів, утримувати увагу покупців і підвищувати продуктивність співробітників</p>
+                                   </div>
+                               </div>
+
+                               <div class="why-we__block why-we__block--03">
+                                   <div class="why-we__info">
+                                       <span class="why-we__number">03</span>
+                                       <h3 class="why-we__block-title">Простота і прозорість процесів</h3>
+                                       <p class="why-we__block-description">Кожен крок зрозумілий і відкритий для клієнта. Інформуємо про всі етапи і пояснюємо кожне рішення</p>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <!-- Третий ряд - блоки 04 и 05 -->
+                           <div class="why-we__blocks-row why-we__blocks-row--third">
+                               <div class="why-we__block why-we__block--04">
+                                   <div class="why-we__image">
+                                       <img src="./img/home-page/why-we-section/why-we1.webp" alt="Features image" class="why-we__img">
+                                   </div>
+                                   <div class="why-we__info">
+                                       <span class="why-we__number">04</span>
+                                       <h3 class="why-we__block-title">Надійність і відповідальність</h3>
+                                       <p class="why-we__block-description">Завжди дотримуємося термінів, бюджету і обіцянок. Ви отримуєте гарантований результат</p>
+                                   </div>
+                               </div>
+
+                               <div class="why-we__block why-we__block--05">
+                                   <div class="why-we__info">
+                                       <span class="why-we__number">05</span>
+                                       <h3 class="why-we__block-title">Висока ефективність і швидка окупність</h3>
+                                       <p class="why-we__block-description">Клієнти бачать реальний ефект від наших проектів: зростання кількості відвідувачів, збільшення середнього чека і позитивні відгуки співробітників</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+          
     </main>
 
     <footer class="footer">
@@ -299,9 +418,10 @@
     </footer>
 
 
-    <script src="./js/fixed-viewport-height.js"></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/header-scroll.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/cases-slider.js"></script>
 </body>
 </html>
