@@ -1721,6 +1721,7 @@ body {
 .our-team__container {
   max-width: 1840px;
   padding: 0 40px;
+  margin: auto;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .our-team__container {
@@ -1802,6 +1803,310 @@ body {
 
 .our-team__description {
   font-size: clamp(24px, 4vw, 37px);
+}
+
+.partners {
+  background-color: #E0E0E0;
+}
+
+.partners__title {
+  font-size: clamp(24px, 4vw, 42px);
+  text-transform: uppercase;
+  font-family: "SportingGrotesque", sans-serif;
+  color: #080808;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.partners__container {
+  max-width: 1840px;
+  padding: 64px 40px;
+  margin: auto;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .partners__container {
+    align-items: flex-start;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .partners__container {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .partners__container {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .partners__list {
+    max-width: 900px;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .partners__list {
+    justify-content: end;
+  }
+}
+
+.partners__list img {
+  height: 60px;
+  object-fit: contain;
+}
+
+.request-form__container {
+  max-width: 1840px;
+  padding: 0 40px;
+  margin: auto;
+  display: flex;
+  gap: 32px;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .request-form__container {
+    flex-direction: column;
+  }
+}
+@media (max-width: 767px) {
+  .request-form__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.request-form__header {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (max-width: 767px) {
+  .request-form__header {
+    gap: 24px;
+  }
+}
+
+.request-form__title {
+  font-size: clamp(24px, 4vw, 42px);
+  text-transform: uppercase;
+  font-family: "SportingGrotesque", sans-serif;
+  color: #080808;
+  font-weight: 500;
+  line-height: 120%;
+  max-width: 460px;
+}
+
+.request-form__description {
+  font-size: 16px;
+  color: #666666;
+}
+
+.request-form__content {
+  width: 100%;
+  margin-left: auto;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .request-form__content {
+    margin-left: 0;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .request-form__content {
+    margin-left: 0;
+    margin-top: 32px;
+  }
+}
+
+.request-form__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.request-form__row {
+  display: flex;
+  gap: 20px;
+}
+.request-form__row--full {
+  width: 100%;
+}
+.request-form__row--submit {
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+@media (max-width: 767px) {
+  .request-form__row {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .request-form__row--submit {
+    align-items: stretch;
+    gap: 20px;
+  }
+}
+
+.request-form__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.request-form__label {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #080808;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.request-form__input,
+.request-form__textarea {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  border-radius: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: #080808;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.request-form__input::placeholder,
+.request-form__textarea::placeholder {
+  color: #a6a6a6;
+}
+.request-form__input:focus,
+.request-form__textarea:focus {
+  outline: none;
+  border-bottom-color: #080808;
+}
+.request-form__input.error,
+.request-form__textarea.error {
+  border-bottom-color: #e74c3c;
+}
+@media (max-width: 767px) {
+  .request-form__input,
+  .request-form__textarea {
+    padding: 14px 0;
+    font-size: 14px;
+  }
+}
+
+.request-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.request-form__checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+
+.request-form__checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.request-form__checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  color: #080808;
+  line-height: 1.4;
+}
+@media (min-width: 1681px) {
+  .request-form__checkbox-label {
+    width: 550px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .request-form__checkbox-label {
+    width: 340px;
+  }
+}
+
+.request-form__checkbox-text {
+  flex: 1;
+  font-size: 16px;
+  color: #666666;
+  transition: color 0.3s ease;
+}
+
+.request-form__error {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.request-form__error.show {
+  opacity: 1;
+}
+
+.request-form__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #080808;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid #080808;
+  padding: 10px 20px;
+  max-width: 500px;
+  width: 100%;
+  height: 64px;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  margin-top: 2px;
+}
+.request-form__submit:hover {
+  opacity: 0.7;
+}
+.request-form__submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.request-form__submit:disabled:hover {
+  opacity: 0.5;
+}
+@media (max-width: 767px) {
+  .request-form__submit {
+    height: 56px;
+    font-size: 14px;
+    margin-top: 0;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

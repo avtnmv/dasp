@@ -548,13 +548,95 @@
             </div>
            </section>
 
-           <section class="partners section-margin"></section>
+           <section class="partners section-margin">
+            <div class="partners__container">
+                <h2 class="partners__title">Нам довіряють</h2>
+
+                <div class="partners__list-wrapper">
+                    <div class="partners__list">
+                        <img src="./img/home-page/partners-section/partners-1.webp" alt="partner-1">
+                        <img src="./img/home-page/partners-section/partners-2.webp" alt="partner-2">
+                        <img src="./img/home-page/partners-section/partners-3.webp" alt="partner-3">
+                        <img src="./img/home-page/partners-section/partners-4.webp" alt="partner-4">
+                        <img src="./img/home-page/partners-section/partners-5.webp" alt="partner-5">
+                        <img src="./img/home-page/partners-section/partners-6.webp" alt="partner-6">
+                        <img src="./img/home-page/partners-section/partners-7.webp" alt="partner-7">
+                    </div>
+                </div>
+            </div>
+           </section>
+
+           <section class="request-form section-margin">
+            <div class="request-form__container">
+                <div class="request-form__header">
+                    <h2 class="request-form__title">Готові втілити ваш простір, який працює на результат?</h2>
+                    <p class="request-form__description">Залиште заявку — і ми допоможемо зробити перший крок</p>
+                </div>
+
+                <div class="request-form__content">
+                    <form action="#" class="request-form__form" id="requestForm">
+                        <div class="request-form__row">
+                            <div class="request-form__field">
+                                <label for="name" class="request-form__label">Ім'я</label>
+                                <input type="text" id="name" name="name" class="request-form__input" placeholder="Введіть своє ім'я" required>
+                                <span class="request-form__error" id="name-error"></span>
+                            </div>
+                            
+                            <div class="request-form__field">
+                                <label for="phone" class="request-form__label">Телефон</label>
+                                <input type="tel" id="phone" name="phone" class="request-form__input" placeholder="Введіть свій телефон" required>
+                                <span class="request-form__error" id="phone-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="request-form__row">
+                            <div class="request-form__field">
+                                <label for="email" class="request-form__label">Email</label>
+                                <input type="email" id="email" name="email" class="request-form__input" placeholder="Введіть свій Email" required>
+                                <span class="request-form__error" id="email-error"></span>
+                            </div>
+                            
+                            <div class="request-form__field">
+                                <label for="objectType" class="request-form__label">Тип об'єкта / простору</label>
+                                <input type="text" id="objectType" name="objectType" class="request-form__input" placeholder="Оберіть один">
+                                <span class="request-form__error" id="objectType-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="request-form__row request-form__row--full">
+                            <div class="request-form__field">
+                                <label for="comment" class="request-form__label">Коментар (за бажанням)</label>
+                                <textarea id="comment" name="comment" class="request-form__textarea" placeholder="Напишіть свій коментар" rows="4"></textarea>
+                                <span class="request-form__error" id="comment-error"></span>
+                            </div>
+                        </div>
+
+                        <div class="request-form__row request-form__row--submit">
+                            <div class="request-form__checkbox-wrapper">
+                                <input type="checkbox" id="consent" name="consent" class="request-form__checkbox" required>
+                                <label for="consent" class="request-form__checkbox-label">
+                                    <span class="request-form__checkbox-text">Ви даєте згоду на обробку персональних даних, надсилаючи цю форму</span>
+                                </label>
+                                <span class="request-form__error" id="consent-error"></span>
+                            </div>
+                            
+                            <button type="submit" class="request-form__submit">
+                                Відправити
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.5.5 7.09 1.91l5.58 5.59H.5v2h12.17l-5.58 5.59L8.5 16.5l8-8z" fill="#080808"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+           </section>
           
     </main>
 
     <footer class="footer">
         <div class="footer__container">
-            <!-- Ваш контент футера здесь -->
+            
         </div>
     </footer>
 
@@ -566,5 +648,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="./js/cases-slider.js"></script>
     <script src="./js/team-marquee.js"></script>
+    <script src="./js/form-validation.js"></script>
 </body>
 </html>

@@ -1019,6 +1019,7 @@
 .our-team__container{
     max-width: 1840px;
     padding: 0 40px;
+    margin: auto;
 
     @include tablet {
         padding: 0 24px;
@@ -1097,5 +1098,304 @@
 .our-team__description{
     font-size: clamp(24px, 4vw, 37px);
 }
-
 // End Out team section
+
+// Partners section
+.partners{
+    background-color: $color-stroke;
+}
+.partners__title{
+    font-size: clamp(24px, 4vw, 42px);
+    text-transform: uppercase;
+    font-family: "SportingGrotesque", sans-serif;
+    color: #080808;
+    font-weight: 500;
+    line-height: 120%;
+}
+
+.partners__container{
+    max-width: 1840px;
+    padding: 64px 40px;
+    margin: auto;
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+    align-items: center;
+    
+    @include desktop {
+        align-items: flex-start;
+    }
+
+    @include tablet {
+        align-items: flex-start;
+    }
+
+    @include mobile {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+.partners__list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @include desktop {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    @include tablet {
+        justify-content: end;
+    }
+}
+
+.partners__list img{
+    height: 60px;
+    object-fit: contain;
+}
+// End Partners section
+
+
+
+// Request form section
+.request-form__container{
+    max-width: 1840px;
+    padding: 0 40px;
+    margin: auto;
+    display: flex;
+    gap: 32px;
+
+    @include tablet{
+        flex-direction: column;
+    }
+
+    @include mobile{
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+.request-form__header{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include mobile{
+        gap: 24px;
+    }
+}
+
+.request-form__title{
+    font-size: clamp(24px, 4vw, 42px);
+    text-transform: uppercase;
+    font-family: "SportingGrotesque", sans-serif;
+    color: #080808;
+    font-weight: 500;
+    line-height: 120%;
+    max-width: 460px;
+}
+
+.request-form__description{
+    font-size: 16px;
+    color: $color-gray;
+}
+
+.request-form__content {
+    width: 100%;
+    margin-left: auto;
+
+    @include tablet {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    @include mobile {
+        margin-left: 0;
+        margin-top: 32px;
+    }
+}
+
+.request-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.request-form__row {
+    display: flex;
+    gap: 20px;
+
+    &--full {
+        width: 100%;
+    }
+
+    &--submit {
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 16px;
+
+        &--submit {
+            align-items: stretch;
+            gap: 20px;
+        }
+    }
+}
+
+.request-form__field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.request-form__label {
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 500;
+    color: $color-black;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.request-form__input,
+.request-form__textarea {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid $color-input;
+    border-radius: 0;
+    font-family: $font-main;
+    font-size: 16px;
+    color: $color-black;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    &::placeholder {
+        color: $color-light-gray;
+    }
+
+    &:focus {
+        outline: none;
+        border-bottom-color: $color-black;
+    }
+
+    &.error {
+        border-bottom-color: #e74c3c;
+    }
+
+    @include mobile {
+        padding: 14px 0;
+        font-size: 14px;
+    }
+}
+
+.request-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.request-form__checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1;
+}
+
+.request-form__checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+.request-form__checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    cursor: pointer;
+    font-family: $font-main;
+    font-size: 20px;
+    color: $color-black;
+    line-height: 1.4;
+
+    @include large-desktop {
+        width: 550px;
+    }
+
+    @include desktop {
+        width: 340px;
+    }
+}
+
+.request-form__checkbox-text {
+    flex: 1;
+    font-size: 16px;
+    color: $color-gray;
+    transition: color 0.3s ease;
+}
+
+
+.request-form__error {
+    font-family: $font-main;
+    font-size: 12px;
+    color: #e74c3c;
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.request-form__submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: $color-black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid $color-black;
+    padding: 10px 20px;
+    max-width: 500px;
+    width: 100%;
+    height: 64px;
+    background-color: transparent;
+    font-family: $font-main;
+    cursor: pointer;
+    margin-top: 2px;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+
+    @include mobile {
+        height: 56px;
+        font-size: 14px;
+        margin-top: 0;
+        max-width: 100%;
+    }
+}
+// End Request form section
