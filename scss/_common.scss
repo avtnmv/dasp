@@ -4,7 +4,7 @@
 
 @include font-face('Inter', '../fonts/Inter.woff2');
 @include font-face('SportingGrotesque', '../fonts/SportingGrotesque.woff2');
-
+@include font-face('Inter-Light', '../fonts/Inter-Light.woff2');
 *,
 *::before,
 *::after {
@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   font-family: $font-main;
-  
+  scroll-behavior: smooth;
 }
 
 body {

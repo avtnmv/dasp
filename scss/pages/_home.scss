@@ -1128,11 +1128,13 @@
 
     @include tablet {
         align-items: flex-start;
+        padding: 48px 24px;
     }
 
     @include mobile {
         align-items: flex-start;
         flex-direction: column;
+        padding: 48px 24px;
     }
 }
 
@@ -1160,6 +1162,10 @@
 
 
 // Request form section
+.request-form {
+    scroll-margin-top: 100px;
+}
+
 .request-form__container{
     max-width: 1840px;
     padding: 0 40px;
@@ -1169,11 +1175,13 @@
 
     @include tablet{
         flex-direction: column;
+        padding: 0 24px;
     }
 
     @include mobile{
         flex-direction: column;
         gap: 24px;
+        padding: 0 24px;
     }
 }
 .request-form__header{
@@ -1182,6 +1190,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+
 
     @include mobile{
         gap: 24px;

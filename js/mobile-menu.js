@@ -30,4 +30,88 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
 document.addEventListener('DOMContentLoaded', () => {
     initMenu('projectsMenuToggle', 'hamburger', 'projectsDropdown', '.header__dropdown-item a');
     initMenu('mobileMenuToggle', 'mobileBurger', 'mobileDropdown', '.header__mobile-nav-item');
+    
+    // Универсальное закрытие мобильного меню при клике на любую ссылку
+    const mobileBurger = document.getElementById('mobileBurger');
+    const mobileDropdown = document.getElementById('mobileDropdown');
+    
+    // Функция для закрытия меню
+    function closeMobileMenu() {
+        if (mobileBurger && mobileDropdown) {
+            mobileBurger.classList.remove('active');
+            mobileDropdown.classList.remove('active');
+            
+            // Принудительно устанавливаем стили для закрытия
+            mobileDropdown.style.opacity = '0';
+            mobileDropdown.style.visibility = 'hidden';
+            mobileDropdown.style.transform = 'translateX(100%)';
+        }
+    }
+    
+    // Обработчик для кнопки CTA "Залиште свій запит"
+    const mobileCTA = document.querySelector('.header__mobile-cta');
+    if (mobileCTA) {
+        mobileCTA.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeMobileMenu();
+            
+            setTimeout(() => {
+                const targetElement = document.getElementById('request');
+                if (targetElement) {
+                    targetElement.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }, 300);
+        });
+    }
+    
+    // Универсальный обработчик для всех ссылок в мобильном меню
+    const mobileNavLinks = document.querySelectorAll('.header__mobile-nav-item[href^="#"]');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                closeMobileMenu();
+                
+                setTimeout(() => {
+                    const targetElement = document.getElementById(href.substring(1));
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }, 300);
+            }
+        });
+    });
+
+    // Обработчики для всех кнопок CTA на странице
+    const ctaButtons = document.querySelectorAll('.slider__cta-button, .advantages__button');
+    const requestForm = document.getElementById('request');
+    
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Закрываем мобильное меню если оно открыто
+            if (mobileBurger && mobileDropdown) {
+                mobileBurger.classList.remove('active');
+                mobileDropdown.classList.remove('active');
+            }
+            
+            // Переходим к форме
+            if (requestForm) {
+                setTimeout(() => {
+                    requestForm.scrollIntoView({ 
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 100);
+            }
+        });
+    });
 });
