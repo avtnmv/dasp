@@ -3,7 +3,7 @@
   "buildCommand": "npm run build",
   "outputDirectory": "public",
   "functions": {
-    "api/send-to-telegram.js": {
+    "api/form.js": {
       "runtime": "nodejs18.x"
     }
   },
