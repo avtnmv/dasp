@@ -26,9 +26,14 @@ exports.handler = async function(event, context) {
   try {
     const { name, phone, email, objectType, comment } = JSON.parse(event.body);
 
-    // Ваши токены
-    const botToken = '8283980015:AAFFcQEPZXdOFg-DacqqHGiVhaHBirkGtuQ';
-    const chatId = '-1003175062060';
+    // 🔒 Используем переменные окружения
+    const botToken = process.env.BOT_TOKEN;
+    const chatId = process.env.CHAT_ID;
+
+    // Проверяем что переменные установлены
+    if (!botToken || !chatId) {
+      throw new Error('Telegram credentials not configured');
+    }
 
     const message = `
 📋 <b>Нова заявка з сайту</b>
@@ -81,7 +86,7 @@ exports.handler = async function(event, context) {
       headers,
       body: JSON.stringify({ 
         success: false, 
-        error: 'Внутрішня помилка сервера' 
+        error: 'Внутрішня помилка сервера: ' + error.message 
       })
     };
   }
