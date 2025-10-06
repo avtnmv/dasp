@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run build:css",
-    "build:css": "sass scss:css --style=compressed --no-source-map",
-    "dev": "sass scss:css --watch"
+    "build:css": "sass scss:css --style=compressed --no-source-map"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "sass": "^1.66.1"
