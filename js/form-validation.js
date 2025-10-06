@@ -33,6 +33,30 @@ document.addEventListener('DOMContentLoaded', function() {
         return cleanPhone.length >= 10 && (cleanPhone.startsWith('380') || cleanPhone.startsWith('0'));
     }
 
+    // Функция для отправки данных на сервер
+    async function submitToServer(formData) {
+        try {
+            const response = await fetch('/api/send-to-telegram.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                return { success: true, message: result.message };
+            } else {
+                return { success: false, errors: result.errors || [result.error || 'Произошла ошибка'] };
+            }
+        } catch (error) {
+            console.error('Ошибка отправки:', error);
+            return { success: false, errors: ['Ошибка соединения с сервером'] };
+        }
+    }
+
     function validateField(input) {
         const value = input.value.trim();
         const fieldName = input.name;
@@ -88,21 +112,39 @@ document.addEventListener('DOMContentLoaded', function() {
         return isValid;
     }
 
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         if (validateForm()) {
             submitButton.textContent = 'Відправляється...';
             submitButton.disabled = true;
             
-            setTimeout(() => {
-                alert('Дякуємо! Ваша заявка успішно відправлена.');
-                form.reset();
+            // Собираем данные формы
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            try {
+                const result = await submitToServer(data);
+                
+                if (result.success) {
+                    alert('Дякуємо! Ваша заявка успішно відправлена.');
+                    form.reset();
+                    inputs.forEach(input => hideError(input));
+                } else {
+                    // Показываем ошибки
+                    if (result.errors && result.errors.length > 0) {
+                        alert('Помилка: ' + result.errors.join(', '));
+                    } else {
+                        alert('Помилка відправки заявки. Спробуйте пізніше.');
+                    }
+                }
+            } catch (error) {
+                console.error('Ошибка:', error);
+                alert('Помилка відправки заявки. Спробуйте пізніше.');
+            } finally {
                 submitButton.textContent = 'Відправити';
                 submitButton.disabled = false;
-                
-                inputs.forEach(input => hideError(input));
-            }, 2000);
+            }
         } else {
             const firstError = form.querySelector('.error');
             if (firstError) {

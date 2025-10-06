@@ -30,7 +30,7 @@
     }
   
     &.compact {
-        background-color: $color-white;
+        background-color: #f1f1f1;
         
         @include mobile {
             .container {
