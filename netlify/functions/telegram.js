@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+// НИКАКИХ ИМПОРТОВ В НАЧАЛЕ!
 
 exports.handler = async function(event, context) {
   const headers = {
@@ -26,11 +26,9 @@ exports.handler = async function(event, context) {
   try {
     const { name, phone, email, objectType, comment } = JSON.parse(event.body);
 
-    // 🔒 Используем переменные окружения
     const botToken = process.env.BOT_TOKEN;
     const chatId = process.env.CHAT_ID;
 
-    // Проверяем что переменные установлены
     if (!botToken || !chatId) {
       throw new Error('Telegram credentials not configured');
     }
@@ -69,7 +67,6 @@ exports.handler = async function(event, context) {
         })
       };
     } else {
-      console.error('Telegram API error:', data);
       return {
         statusCode: 500,
         headers,
@@ -80,13 +77,12 @@ exports.handler = async function(event, context) {
       };
     }
   } catch (error) {
-    console.error('Function error:', error);
     return {
       statusCode: 500,
       headers,
       body: JSON.stringify({ 
         success: false, 
-        error: 'Внутрішня помилка сервера: ' + error.message 
+        error: 'Внутрішня помилка сервера' 
       })
     };
   }
