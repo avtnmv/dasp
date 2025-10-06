@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inter";
   src: url("../fonts/Inter.woff2") format("woff2");
@@ -35,6 +36,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  background-color: #f1f1f1;
 }
 
 .container {
@@ -2317,6 +2319,486 @@ body {
     margin-top: 0;
     max-width: 100%;
   }
+}
+
+.hero-static {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .hero-static {
+    height: 100vh;
+    min-height: 500px;
+  }
+}
+
+.hero-static__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-static__image {
+  width: 100%;
+  height: 100%;
+  background-color: #808080;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-static__content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px 40px;
+}
+@media (max-width: 767px) {
+  .hero-static__content {
+    padding: 24px 24px;
+  }
+}
+
+.hero-static__text-wrapper {
+  max-width: 1840px;
+  margin: auto;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .hero-static__text-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.hero-static__left {
+  flex: 1;
+  max-width: 430px;
+}
+@media (max-width: 767px) {
+  .hero-static__left {
+    max-width: 100%;
+  }
+}
+
+.hero-static__right {
+  flex: 1;
+  max-width: 900px;
+}
+@media (max-width: 767px) {
+  .hero-static__right {
+    max-width: 100%;
+  }
+}
+
+.hero-static__description {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 4.6vw, 32px);
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 150%;
+  margin: 0;
+  text-align: left;
+}
+
+.hero-static__title {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 120%;
+  max-width: 430px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .hero-static__title {
+    max-width: 250px;
+  }
+}
+
+.about-content {
+  padding: 80px 0;
+}
+@media (max-width: 767px) {
+  .about-content {
+    padding: 60px 0;
+  }
+}
+
+.about-content__container {
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (max-width: 767px) {
+  .about-content__container {
+    padding: 0 20px;
+  }
+}
+
+.about-content__text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content__title {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 500;
+  color: #080808;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.about-content__title svg {
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .about-content__title {
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+}
+
+.about-content__description {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  color: #080808;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+@media (max-width: 767px) {
+  .about-content__description {
+    margin-bottom: 24px;
+  }
+}
+
+.about-content__text-item p {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 400;
+  color: #080808;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.our-team__title {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 500;
+  color: #080808;
+  text-transform: uppercase;
+}
+
+.our-team__header {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-our-team__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-our-team__description {
+  font-size: 16px;
+  color: #666666;
+  max-width: 400px;
+}
+
+.about-our-team__description-wrapper {
+  margin-bottom: 64px;
+}
+@media (max-width: 767px) {
+  .about-our-team__description-wrapper {
+    margin-bottom: 32px;
+  }
+}
+
+.our-team__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1840px;
+}
+@media (max-width: 1200px) {
+  .our-team__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .our-team__content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.our-team__content-item {
+  width: 100%;
+}
+
+.our-team__content-item-image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.our-team__content-item-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.our-team__content-item-name {
+  margin-top: 20px;
+}
+
+.our-team__content-item-name-title {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #080808;
+  margin-bottom: 8px;
+}
+
+.our-team__content-item-name-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #666666;
+}
+
+.testimonials {
+  overflow-x: hidden;
+  max-width: 1840px;
+  padding: 0 40px;
+}
+
+.testimonials__container {
+  max-width: 1840px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.testimonials__title {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: clamp(24px, 4vw, 42px);
+  font-weight: 500;
+  color: #080808;
+  text-transform: uppercase;
+  max-width: 630px;
+  width: 100%;
+  margin: 0;
+}
+
+.testimonials__list-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1220px;
+  overflow: hidden;
+}
+
+.about-testimonials-swiper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+.about-testimonials-swiper .swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+.about-testimonials-swiper .swiper-slide {
+  height: auto;
+  display: flex;
+  width: calc(50% - 12px) !important;
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transition: none !important;
+  box-shadow: none !important;
+  flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .about-testimonials-swiper .swiper-slide {
+    width: 100% !important;
+  }
+}
+.about-testimonials-swiper .swiper-slide::after, .about-testimonials-swiper .swiper-slide::before {
+  display: none !important;
+}
+
+.testimonials__card {
+  background: #f8f8f8;
+  border-radius: clamp(8px, 1.5vw, 12px);
+  padding: clamp(20px, 4vw, 32px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  margin: 0;
+}
+
+.testimonials__stars {
+  display: flex;
+  gap: clamp(2px, 0.5vw, 4px);
+  margin-bottom: clamp(12px, 2vw, 20px);
+}
+
+.testimonials__star {
+  color: #ffd700;
+  font-size: clamp(14px, 2.2vw, 18px);
+}
+
+.testimonials__text-container {
+  position: relative;
+  flex: 1;
+}
+
+.testimonials__text {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(14px, 2.2vw, 16px);
+  font-weight: 400;
+  color: #080808;
+  line-height: 1.6;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.testimonials__text--short {
+  display: block;
+}
+
+.testimonials__text--full {
+  display: none;
+  margin-bottom: clamp(16px, 3vw, 24px);
+}
+
+.testimonials__card.expanded .testimonials__text--short {
+  display: none;
+}
+.testimonials__card.expanded .testimonials__text--full {
+  display: block;
+}
+
+.testimonials__read-more-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: clamp(12px, 2vw, 16px) 0 0 0;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(12px, 2vw, 14px);
+  font-weight: 500;
+  color: #080808;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+.testimonials__read-more-btn:hover {
+  color: #666;
+}
+
+.testimonials__read-more-text {
+  display: inline;
+}
+
+.testimonials__card.expanded .testimonials__read-more-text::before {
+  content: "Приховати";
+}
+
+.testimonials__card:not(.expanded) .testimonials__read-more-text::before {
+  content: "Читати більше...";
+}
+
+.testimonials__author {
+  display: flex;
+  align-items: center;
+  gap: clamp(8px, 1.5vw, 12px);
+}
+
+.testimonials__avatar {
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.testimonials__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials__author-name {
+  font-family: "SportingGrotesque", sans-serif;
+  font-size: clamp(12px, 2vw, 16px);
+  font-weight: 500;
+  color: #080808;
+  margin: 0;
+}
+
+.testimonials__navigation {
+  display: flex;
+  justify-content: center;
+  gap: clamp(12px, 2vw, 16px);
+  margin-top: clamp(30px, 4vw, 40px);
+}
+
+.testimonials__nav-btn {
+  width: clamp(40px, 6vw, 48px);
+  height: clamp(40px, 6vw, 48px);
+  border: 1px solid #080808;
+  background: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.testimonials__nav-btn svg {
+  width: clamp(16px, 3vw, 24px);
+  height: clamp(16px, 3vw, 24px);
+}
+.testimonials__nav-btn:hover {
+  background: #080808;
+}
+.testimonials__nav-btn:hover svg path {
+  stroke: #ffffff;
+}
+.testimonials__nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.testimonials__nav-btn:disabled:hover {
+  background: transparent;
+}
+.testimonials__nav-btn:disabled:hover svg path {
+  stroke: #080808;
 }
 
 /*# sourceMappingURL=main.css.map */
