@@ -62,10 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.classList.add('expanded');
                 }
                 
-                // Update Swiper after content change
-                if (testimonialsSwiper) {
-                    testimonialsSwiper.update();
-                }
+                // Update Swiper after animation completes
+                setTimeout(() => {
+                    if (testimonialsSwiper) {
+                        testimonialsSwiper.update();
+                    }
+                }, 500); // Задержка соответствует длительности CSS анимации
             });
         });
     }

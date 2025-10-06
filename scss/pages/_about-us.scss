@@ -278,7 +278,15 @@
     display: flex;
     justify-content: space-between;
 
-    box-sizing: border-box;
+    @include tablet {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 32px;
+    }
 }
 
 .testimonials__title {
@@ -360,7 +368,6 @@
 // Text Container - Read More Functionality
 .testimonials__text-container {
     position: relative;
-    flex: 1;
 }
 
 .testimonials__text {
@@ -373,22 +380,50 @@
     transition: all 0.3s ease;
 }
 
+.testimonials__card {
+    height: auto;
+    max-height: 280px; // Максимальная высота для карточки
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    &.expanded {
+        max-height: 450px; // Увеличенная высота для полного текста
+    }
+}
+
+.testimonials__text-container {
+    overflow: hidden;
+}
+
 .testimonials__text--short {
     display: block;
 }
 
 .testimonials__text--full {
     display: none;
-    margin-bottom: clamp(16px, 3vw, 24px);
 }
 
-.testimonials__card.expanded {
-    .testimonials__text--short {
-        display: none;
+.testimonials__card {
+    &.expanded {
+        .testimonials__text--short {
+            display: none;
+        }
+        
+        .testimonials__text--full {
+            display: block;
+            animation: fadeInUp 0.3s ease-out 0.1s both;
+        }
     }
-    
-    .testimonials__text--full {
-        display: block;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -400,33 +435,30 @@
     margin: clamp(12px, 2vw, 16px) 0 0 0;
     cursor: pointer;
     font-family: $font-main;
-    font-size: clamp(12px, 2vw, 14px);
+    font-size: 14px;
     font-weight: 500;
-    color: $color-black;
-    text-decoration: underline;
+    color: $color-gray;
     transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+    text-align: left;
+    margin-bottom: 24px;
     
-    &:hover {
-        color: #666;
-    }
 }
 
 .testimonials__read-more-text {
     display: inline;
+    
+    &::before {
+        content: "Читати більше...";
+    }
 }
 
 .testimonials__card.expanded {
     .testimonials__read-more-text {
         &::before {
             content: "Приховати";
-        }
-    }
-}
-
-.testimonials__card:not(.expanded) {
-    .testimonials__read-more-text {
-        &::before {
-            content: "Читати більше...";
         }
     }
 }
@@ -453,8 +485,8 @@
 }
 
 .testimonials__author-name {
-    font-family: $font-title;
-    font-size: clamp(12px, 2vw, 16px);
+    font-family: $font-main;
+    font-size: 18px;
     font-weight: 500;
     color: $color-black;
     margin: 0;

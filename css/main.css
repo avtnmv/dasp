@@ -2601,7 +2601,18 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .testimonials__container {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+@media (max-width: 767px) {
+  .testimonials__container {
+    flex-direction: column;
+    gap: 32px;
+  }
 }
 
 .testimonials__title {
@@ -2676,7 +2687,6 @@ body {
 
 .testimonials__text-container {
   position: relative;
-  flex: 1;
 }
 
 .testimonials__text {
@@ -2689,13 +2699,26 @@ body {
   transition: all 0.3s ease;
 }
 
+.testimonials__card {
+  height: auto;
+  max-height: 280px;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.testimonials__card.expanded {
+  max-height: 450px;
+}
+
+.testimonials__text-container {
+  overflow: hidden;
+}
+
 .testimonials__text--short {
   display: block;
 }
 
 .testimonials__text--full {
   display: none;
-  margin-bottom: clamp(16px, 3vw, 24px);
 }
 
 .testimonials__card.expanded .testimonials__text--short {
@@ -2703,8 +2726,19 @@ body {
 }
 .testimonials__card.expanded .testimonials__text--full {
   display: block;
+  animation: fadeInUp 0.3s ease-out 0.1s both;
 }
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .testimonials__read-more-btn {
   background: none;
   border: none;
@@ -2712,26 +2746,26 @@ body {
   margin: clamp(12px, 2vw, 16px) 0 0 0;
   cursor: pointer;
   font-family: "Inter", sans-serif;
-  font-size: clamp(12px, 2vw, 14px);
+  font-size: 14px;
   font-weight: 500;
-  color: #080808;
-  text-decoration: underline;
+  color: #666666;
   transition: all 0.3s ease;
-}
-.testimonials__read-more-btn:hover {
-  color: #666;
+  opacity: 1;
+  transform: translateY(0);
+  display: block;
+  text-align: left;
+  margin-bottom: 24px;
 }
 
 .testimonials__read-more-text {
   display: inline;
 }
+.testimonials__read-more-text::before {
+  content: "Читати більше...";
+}
 
 .testimonials__card.expanded .testimonials__read-more-text::before {
   content: "Приховати";
-}
-
-.testimonials__card:not(.expanded) .testimonials__read-more-text::before {
-  content: "Читати більше...";
 }
 
 .testimonials__author {
@@ -2754,8 +2788,8 @@ body {
 }
 
 .testimonials__author-name {
-  font-family: "SportingGrotesque", sans-serif;
-  font-size: clamp(12px, 2vw, 16px);
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
   font-weight: 500;
   color: #080808;
   margin: 0;
