@@ -1374,6 +1374,21 @@ body {
 .cases__slider .swiper-slide.swiper-slide-active::after {
   opacity: 0;
 }
+@media (max-width: 767px) {
+  .cases__slider .swiper-slide.swiper-slide-active {
+    height: 230px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cases__slider .swiper-slide.swiper-slide-active {
+    height: 300px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1680px) {
+  .cases__slider .swiper-slide.swiper-slide-active {
+    height: 350px;
+  }
+}
 
 .cases__slide-image {
   width: 100%;
