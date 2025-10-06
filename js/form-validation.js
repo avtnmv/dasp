@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для отправки данных на сервер
     async function submitToServer(formData) {
         try {
-            const response = await fetch('/api/send-to-telegram.php', {
+            const response = await fetch('/api/send-to-telegram.js', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

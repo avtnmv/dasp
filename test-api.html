@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 50px auto; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #007cba; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #005a87; }
+        .result { margin-top: 20px; padding: 10px; border-radius: 4px; }
+        .success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; }
+        .error { background: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Тест API отправки в Telegram</h1>
+    
+    <form id="testForm">
+        <div class="form-group">
+            <label for="name">Имя *</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Телефон *</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+        
+        <div class="form-group">
+            <label for="objectType">Тип объекта</label>
+            <select id="objectType" name="objectType">
+                <option value="">Выберите тип</option>
+                <option value="квартира">Квартира</option>
+                <option value="дом">Дом</option>
+                <option value="офис">Офис</option>
+                <option value="магазин">Магазин</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="comment">Комментарий</label>
+            <textarea id="comment" name="comment" rows="4"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label>
+                <input type="checkbox" id="consent" name="consent" required>
+                Согласие на обработку персональных данных *
+            </label>
+        </div>
+        
+        <button type="submit">Отправить тест</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>Отправка...</p>';
+            
+            try {
+                const response = await fetch('/api/send-to-telegram.js', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    resultDiv.innerHTML = `<div class="result success">✅ ${result.message}</div>`;
+                } else {
+                    const errors = result.errors ? result.errors.join(', ') : result.error;
+                    resultDiv.innerHTML = `<div class="result error">❌ Ошибка: ${errors}</div>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="result error">❌ Ошибка соединения: ${error.message}</div>`;
+            }
+        });
+    </script>
+</body>
+</html>
