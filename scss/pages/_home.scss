@@ -25,7 +25,7 @@
     }
 
     @include large-desktop {
-        padding: 0 40px;
+        padding: 0 0px;
     }
 }
 
@@ -136,6 +136,14 @@
 
     @include mobile {
         padding: 0 20px;
+    }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
     }
 }
 
@@ -334,6 +342,14 @@
     @include mobile {
         padding: 0 24px;
     }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
 }
 
 .cases__title{
@@ -363,6 +379,14 @@
         margin-bottom: 32px;
         text-align: left;
     }
+
+    @include large-desktop {
+        margin-bottom: 120px;
+    }
+
+    @include desktop {
+        margin-bottom: 64px;
+    }
 }
 
 .cases__spacer{
@@ -376,10 +400,6 @@
 
 .cases__container {
     display: flex;
-    @include large-desktop {
-        margin-bottom: 16px;
-    }
-
     justify-content: center;
 
     @include tablet {
@@ -391,10 +411,6 @@
     @include mobile {
         flex-direction: column;
         gap: 32px;
-    }
-
-    @include large-desktop {
-        margin-bottom: 120px;
     }
 }
 
@@ -411,6 +427,11 @@
     .swiper {
         overflow: hidden;
         position: relative;
+        height: 400px; // Фиксированная высота для контейнера
+    }
+    
+    .swiper-wrapper {
+        align-items: center;
     }
   
      .swiper-slide {
@@ -418,7 +439,7 @@
        height: 300px;
        position: relative;
        
-       transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
+       transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease, height 0.5s ease;
        transform: scale(0.8);
        
        &::after {
@@ -449,6 +470,7 @@
    
        &.swiper-slide-active {
          transform: scale(1.1);
+         height: 380px; // Увеличиваем высоту центрального слайда до 380px
          opacity: 1;
          filter: brightness(1.05) saturate(1);
          z-index: 2;
@@ -528,6 +550,14 @@
 
     @include mobile {
         padding: 0 24px;
+    }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
     }
 }
 
@@ -833,6 +863,14 @@
     @include mobile {
         padding: 0 24px;
     }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
 }
 
 .advantages__container{
@@ -1028,6 +1066,14 @@
     @include mobile {
         padding: 0 24px;
     }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
 }
 .our-team__marquee {
     overflow: hidden;
@@ -1098,6 +1144,8 @@
 .our-team__description{
     font-size: clamp(24px, 4vw, 37px);
 }
+
+
 // End Out team section
 
 // Partners section
@@ -1136,6 +1184,10 @@
         flex-direction: column;
         padding: 48px 24px;
     }
+    @include large-desktop {
+        padding: 64px 0px;
+    }
+
 }
 
 .partners__list{
@@ -1182,6 +1234,14 @@
         flex-direction: column;
         gap: 24px;
         padding: 0 24px;
+    }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
     }
 }
 .request-form__header{

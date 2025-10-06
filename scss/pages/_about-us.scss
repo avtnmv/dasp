@@ -177,7 +177,7 @@
 }
 
 // Our Team section
-.our-team__title{
+.about-our-team__title{
     font-family: $font-title;
     font-size: clamp(24px, 4vw, 42px);
     font-weight: 500;
@@ -186,7 +186,7 @@
 }
 
 .our-team__header{
-    max-width: 440px;
+    max-width: 540px;
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -200,7 +200,7 @@
 .about-our-team__description{
     font-size: 16px;
     color: $color-gray;
-    max-width: 400px;
+    max-width: 500px;
 }
 .about-our-team__description-wrapper{
     margin-bottom: 64px;
@@ -254,7 +254,6 @@
     font-size: 20px;
     font-weight: 500;
     color: $color-black;
-    margin-bottom: 8px;
 }
 
 .our-team__content-item-name-subtitle {
@@ -269,6 +268,22 @@
     overflow-x: hidden;
     max-width: 1840px;
     padding: 0 40px;
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include mobile {
+        padding: 0 24px;
+    }
 }
 
 .testimonials__container {
@@ -298,6 +313,7 @@
     max-width: 630px;
     width: 100%;
     margin: 0;
+    line-height: 120%;
 }
 
 .testimonials__list-wrapper {

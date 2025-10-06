@@ -29,7 +29,8 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
 
 document.addEventListener('DOMContentLoaded', () => {
     initMenu('projectsMenuToggle', 'hamburger', 'projectsDropdown', '.header__dropdown-item a');
-    initMenu('mobileMenuToggle', 'mobileBurger', 'mobileDropdown', '.header__mobile-nav-item');
+    // Убираем автоматическое закрытие меню для мобильных ссылок, так как у нас есть специальная обработка
+    initMenu('mobileMenuToggle', 'mobileBurger', 'mobileDropdown', '.header__mobile-nav-item[href^="#"]');
     
     // Универсальное закрытие мобильного меню при клике на любую ссылку
     const mobileBurger = document.getElementById('mobileBurger');
@@ -68,10 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // Универсальный обработчик для всех ссылок в мобильном меню
-    const mobileNavLinks = document.querySelectorAll('.header__mobile-nav-item[href^="#"]');
+    const mobileNavLinks = document.querySelectorAll('.header__mobile-nav-item');
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            console.log('Mobile nav link clicked:', link);
             const href = link.getAttribute('href');
+            console.log('Link href:', href);
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 closeMobileMenu();
@@ -84,6 +87,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             block: 'start'
                         });
                     }
+                }, 300);
+            } else if (href && !href.startsWith('#')) {
+                // Для внешних ссылок закрываем меню и переходим через небольшую задержку
+                console.log('External link clicked:', href);
+                e.preventDefault();
+                closeMobileMenu();
+                
+                setTimeout(() => {
+                    console.log('Navigating to:', href);
+                    window.location.href = href;
                 }, 300);
             }
         });

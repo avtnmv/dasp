@@ -28,6 +28,14 @@
     @include mobile{
         padding: 0 24px;
     }
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
     
 }
 

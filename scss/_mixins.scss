@@ -37,6 +37,13 @@
     padding: 24px;
   }
 
+  @include large-desktop {
+    padding: 24px 0px;
+  }
+
+  @include desktop {
+    padding: 24px 40px;
+  }
 }
 
 @mixin font-face($name, $path, $weight: normal, $style: normal) {
