@@ -49,9 +49,13 @@ exports.handler = async function(event, context) {
 📋 <b>Нова заявка з сайту</b>
 
 👤 <b>Ім'я:</b> ${name}
+<br>
 📞 <b>Телефон:</b> ${phone}
+<br>
 📧 <b>Email:</b> ${email}
-🏢 <b>Тип об'єкта:</b> ${objectType}
+<br>
+🏢 <b>Тип об'єкта:</b> ${objectType || 'Не вказано'}
+<br>
 💬 <b>Коментар:</b> ${comment || 'Не вказано'}
     `.trim();
 
