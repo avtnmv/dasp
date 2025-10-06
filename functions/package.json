@@ -1,0 +1,12 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "sass scss:css --style=compressed --no-source-map",
+    "dev": "sass scss:css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
+  }
+}
