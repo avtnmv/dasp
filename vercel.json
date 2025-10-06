@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/send-to-telegram.php": {
-      "runtime": "php@8.1"
+      "runtime": "vercel-php@1.0.0"
     }
   },
   "rewrites": [
