@@ -1215,11 +1215,19 @@
     @include tablet {
         justify-content: end;
     }
+
+    @include mobile {
+        gap: 40px;
+    }
 }
 
 .partners__list img{
     height: 60px;
     object-fit: contain;
+
+    @include mobile {
+        height: 45px;
+    }
 }
 // End Partners section
 

@@ -2159,10 +2159,20 @@ body {
     justify-content: end;
   }
 }
+@media (max-width: 767px) {
+  .partners__list {
+    gap: 40px;
+  }
+}
 
 .partners__list img {
   height: 60px;
   object-fit: contain;
+}
+@media (max-width: 767px) {
+  .partners__list img {
+    height: 45px;
+  }
 }
 
 .request-form {
