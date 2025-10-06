@@ -48,10 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.classList.add('success');
             submitButton.disabled = true;
             
-            // Через 3 секунды возвращаем обычное состояние
-            setTimeout(() => {
-                resetSubmitButton();
-            }, 3000);
+            // НЕ возвращаем кнопку в исходное состояние после успеха
+            // Кнопка остается в состоянии "Відправлено!"
             
         } else if (type === 'error') {
             submitButton.innerHTML = `
@@ -64,15 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             submitButton.classList.add('error');
             
-            // Через 3 секунды возвращаем обычное состояние
+            // Через 3 секунды возвращаем обычное состояние только при ошибке
             setTimeout(() => {
-                resetSubmitButton();
+                resetSubmitButtonOnError();
             }, 3000);
         }
     }
 
     // Функция для сброса кнопки в исходное состояние
     function resetSubmitButton() {
+        if (submitButton.dataset.originalHtml) {
+            submitButton.innerHTML = submitButton.dataset.originalHtml;
+        } else {
+            submitButton.textContent = 'Відправити';
+        }
+        submitButton.classList.remove('loading', 'error');
+        submitButton.disabled = false;
+    }
+
+    // Функция для сброса кнопки только при ошибке
+    function resetSubmitButtonOnError() {
         if (submitButton.dataset.originalHtml) {
             submitButton.innerHTML = submitButton.dataset.originalHtml;
         } else {
@@ -219,6 +228,11 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
+        // Проверяем, не была ли форма уже успешно отправлена
+        if (submitButton.classList.contains('success')) {
+            return; // Предотвращаем повторную отправку
+        }
+        
         if (validateForm()) {
             showLoadingState();
             
@@ -262,11 +276,23 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.classList.contains('error')) {
                 hideError(this);
             }
+            
+            // Если форма была успешно отправлена, но пользователь начал редактировать поля,
+            // сбрасываем состояние кнопки
+            if (submitButton.classList.contains('success')) {
+                resetSubmitButton();
+            }
         });
     });
 
     const consentCheckbox = document.getElementById('consent');
     consentCheckbox.addEventListener('change', function() {
         validateField(this);
+        
+        // Если форма была успешно отправлена, но пользователь изменил чекбокс,
+        // сбрасываем состояние кнопки
+        if (submitButton.classList.contains('success')) {
+            resetSubmitButton();
+        }
     });
 });
