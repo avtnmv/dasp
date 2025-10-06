@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для отправки данных на сервер - ИСПРАВЛЕННЫЙ ПУТЬ
     async function submitToServer(formData) {
         try {
-            const response = await fetch('/.netlify/functions/telegram', {
+            const response = await fetch('/.netlify/functions/telegram.js', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
