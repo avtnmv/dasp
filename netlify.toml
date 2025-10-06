@@ -1,0 +1,12 @@
+[build]
+  publish = "."
+  functions = "functions"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-functions-install-core"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

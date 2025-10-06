@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
             errorElement.classList.add('show');
         }
         input.classList.add('error');
-        
     }
 
     function hideError(input) {
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             errorElement.classList.remove('show');
         }
         input.classList.remove('error');
-        
     }
 
     function validateEmail(email) {
@@ -33,10 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return cleanPhone.length >= 10 && (cleanPhone.startsWith('380') || cleanPhone.startsWith('0'));
     }
 
-    // Функция для отправки данных на сервер
+    // Функция для отправки данных на сервер - ИСПРАВЛЕННЫЙ ПУТЬ
     async function submitToServer(formData) {
         try {
-            const response = await fetch('/api/send-to-telegram.js', {
+            const response = await fetch('/.netlify/functions/telegram', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -127,20 +125,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await submitToServer(data);
                 
                 if (result.success) {
-                    alert('Дякуємо! Ваша заявка успішно відправлена.');
+                    alert('✅ Дякуємо! Ваша заявка успішно відправлена.');
                     form.reset();
                     inputs.forEach(input => hideError(input));
                 } else {
                     // Показываем ошибки
                     if (result.errors && result.errors.length > 0) {
-                        alert('Помилка: ' + result.errors.join(', '));
+                        alert('❌ Помилка: ' + result.errors.join(', '));
                     } else {
-                        alert('Помилка відправки заявки. Спробуйте пізніше.');
+                        alert('❌ Помилка відправки заявки. Спробуйте пізніше.');
                     }
                 }
             } catch (error) {
                 console.error('Ошибка:', error);
-                alert('Помилка відправки заявки. Спробуйте пізніше.');
+                alert('❌ Помилка відправки заявки. Спробуйте пізніше.');
             } finally {
                 submitButton.textContent = 'Відправити';
                 submitButton.disabled = false;
