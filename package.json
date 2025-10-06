@@ -4,11 +4,11 @@
   "description": "DASP Project with SCSS architecture",
   "main": "index.html",
   "scripts": {
-    "build-css": "sass scss/main.scss css/main.css --style=compressed --source-map",
-    "watch-css": "sass scss/main.scss css/main.css --watch --style=expanded --source-map",
-    "dev": "sass scss/main.scss css/main.css --watch --style=expanded --source-map",
-    "build": "npm run build-css",
-    "clean": "rm -rf css/main.css css/main.css.map"
+    "build-css": "sass scss/main.scss public/css/main.css --style=compressed --source-map",
+    "watch-css": "sass scss/main.scss public/css/main.css --watch --style=expanded --source-map",
+    "dev": "sass scss/main.scss public/css/main.css --watch --style=expanded --source-map",
+    "build": "npm run build-css && cp -r css/* public/css/ 2>/dev/null || true && cp -r img public/ && cp -r fonts public/ && cp -r favicon public/ && cp -r js public/ && cp *.html public/",
+    "clean": "rm -rf public/css/main.css public/css/main.css.map"
   },
   "devDependencies": {
     "sass": "^1.69.0"
