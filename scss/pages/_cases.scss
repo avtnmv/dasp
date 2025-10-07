@@ -1,0 +1,64 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Универсальные стили для страниц cases
+// Замена background-image на img теги для всех случаев
+
+.cards__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+    z-index: 0;
+}
+
+// Обновляем стили для hover эффекта
+@include desktop {
+    .cards__wrapper:hover {
+        .cards__image {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+.cases-page__title{
+    font-size: clamp(24px, 3vw, 42px);
+    font-family: $font-title;
+    font-weight: 500;
+    color: $color-black;
+    margin-bottom: 64px;
+
+    @include desktop {
+        margin-bottom: 32px;
+    }
+
+    @include tablet {
+        margin-bottom: 32px;
+    }
+
+    @include mobile {
+        margin-bottom: 32px;
+    }
+
+    
+}
+
+.cases-page__footer{
+    justify-content: space-between;
+}
+
+.cards__arrow-text{
+    color: $color-gray;
+}
+.cases-page__subtitle{
+    text-transform: none;
+}
+
+.cases-page__item::after{
+    background: none;
+}

@@ -1,0 +1,226 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+
+
+.offer-details__content-list{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+.offer-details__title{
+    font-size: clamp(24px, 3vw, 42px);
+    font-weight: 500;
+    color: $color-black;
+    font-family: $font-title;
+    text-transform: uppercase;
+    max-width: 600px;
+    width: 100%;
+}
+
+.offer-details{
+    display: flex;
+    max-width: 1840px;
+    justify-content: space-between;
+    padding: 0 40px;
+    gap: 20px;
+
+    @include large-desktop {
+        padding: 0 0px;
+    }
+
+    @include desktop {
+        padding: 0 40px;
+    }
+
+    @include tablet {
+        padding: 0 24px;
+    }
+
+    @include mobile {
+        padding: 0 24px;
+    }
+
+    @media (max-width: 1300px) {
+        flex-direction: column;
+    }
+}
+
+.offer-details__content-list-item-title{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    color: $color-black;
+    font-family: $font-main;
+    color: $color-gray;
+
+    svg {
+       flex-shrink: 0;
+    }
+}
+
+.offer-details__content{
+    background-color: $color-white;
+    padding: 48px;
+
+    @include large-desktop {
+        max-width: 1220px;
+        width: 100%;
+    }
+
+    @include desktop {
+        max-width: 900px;
+        width: 100%;
+    }
+
+    @include tablet {
+        padding: 32px 24px;
+    }
+
+    @include mobile {
+        padding: 32px 24px;
+    }
+}
+.offer-details__content-title{
+    font-size: 32px;
+    font-weight: 500;
+    color: $color-black;
+    font-family: $font-title;
+
+    @include mobile {
+        font-size: 24px;
+    }
+}
+
+.offer-details__content-list-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 810px;
+    gap: 32px;
+}
+
+.offer-details__content-list-items{
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include tablet {
+        flex-direction: column;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.offer-details__content-list-item{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 210px;
+    max-width: 418px;
+
+    @include desktop {
+        max-width: 280px;
+    }
+
+}
+
+.offer-details__content-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+}
+
+.offer-details__discount {
+
+    background-color: $color-white;
+    color: $color-black;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-family: $font-title;
+    font-size: clamp(12px, 2vw, 14px);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+.offer-details__price-block {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.offer-details__price {
+    display: flex;
+    align-items: last baseline;
+    justify-content: center;
+    gap: clamp(8px, 1.5vw, 12px);
+    margin-bottom: clamp(8px, 1.5vw, 12px);
+    
+    &-old {
+        font-family: $font-main;
+        font-size: 32px;
+        color: #e1e1e1;
+        text-decoration: line-through;
+    }
+    
+    &-current {
+        font-family: $font-main;
+        font-size: 78px;
+        font-weight: 600;
+        color: $color-black;
+    }
+    
+    &-unit {
+        font-family: $font-main;
+        font-size: clamp(14px, 2.5vw, 18px);
+        color: $color-black;
+    }
+}
+
+.offer-details__condition {
+    font-family: $font-main;
+    font-size: clamp(12px, 2vw, 14px);
+    color: #666;
+    text-align: center;
+    margin: 0;
+}
+
+.offer-details__button {
+    width: 100%;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    height: 50px;
+    font-family: $font-main;
+    font-size: clamp(16px, 2.5vw, 18px);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(8px, 1.5vw, 12px);
+    
+    
+    svg {
+        width: clamp(16px, 2.5vw, 20px);
+        height: clamp(16px, 2.5vw, 20px);
+        fill: $color-white;
+    }
+}
+
+
