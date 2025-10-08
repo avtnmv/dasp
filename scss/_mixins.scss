@@ -13,13 +13,13 @@
 }
 
 @mixin desktop {
-  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg}) {
     @content;
   }
 }
 
 @mixin large-desktop {
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: $breakpoint-xl) {
     @content;
   }
 }

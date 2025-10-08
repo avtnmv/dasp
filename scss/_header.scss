@@ -133,16 +133,16 @@
     overflow-y: auto;
     
     @supports (-webkit-touch-callout: none) {
-        height: 90vh;
-        min-height: 90vh;
-        max-height: 90vh;
+        height: 100vh;
+        min-height: 100vh;
+        max-height: 100vh;
     }
     
     @media screen and (-webkit-min-device-pixel-ratio:0) {
         @supports not (-webkit-touch-callout: none) {
-            height: 99vh;
-            min-height: 99vh;
-            max-height: 99vh;
+            height: 100vh;
+            min-height: 100vh;
+            max-height: 100vh;
         }
     }
     

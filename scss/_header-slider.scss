@@ -182,6 +182,14 @@
     @include mobile {
         padding: 24px;
     }
+
+    @include large-desktop {
+        padding: 48px 0px;
+    }
+
+    @include desktop {
+        padding: 48px 40px;
+    }
 }
 
 .slider__description {
