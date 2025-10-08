@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>404 - Сторінку не знайдено | DASP</title>
+    
+    <meta name="description" content="Сторінку не знайдено. Поверніться на головну сторінку DASP - студії дизайну інтер'єру.">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg?v=2">
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png?v=2" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="./favicon/web-app-manifest-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="./favicon/web-app-manifest-512x512.png">
+    <meta name="apple-mobile-web-app-title" content="DASP">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .error-404 {
+            margin-bottom: 40px;
+        }
+
+        .error-404 svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .error-title {
+            font-family: 'SportingGrotesque', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #080808;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .error-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            color: #080808;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .error-back:hover {
+            opacity: 0.7;
+        }
+
+        .error-back svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .error-404 svg {
+                width: 300px;
+                height: auto;
+            }
+            
+            .error-title {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .error-404 svg {
+                width: 250px;
+                height: auto;
+            }
+            
+            .error-title {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container header__container">
+                <a href="index.html" class="header__logo">
+                    <svg width="130" height="49" viewBox="0 0 130 49" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#a)">
+                            <path d="M0 .505h12.82q4.405 0 7.883 1.579 3.48 1.578 5.466 4.504 1.988 2.926 1.988 6.848 0 3.89-1.988 6.816t-5.466 4.504-7.883 1.58H0zm10.733 22.173q5.597 0 8.447-2.377 2.848-2.376 2.848-6.865 0-4.487-2.865-6.898t-8.43-2.41H5.896v18.55zM54.39.505H44.156l-12.157 25.83H44.97l2.48-4.314h-.01l.994-1.73.228-.395.085-.146H57.2l2.988 6.586h6.36zm-5.207 14.623-.002.004h-.518l-1.354 2.355-1.614 2.804-.995 1.73h-4.417l1.587-3.498 1.655-3.657 4.903-10.738h1.69l4.87 10.738.118.262zm27.45 10.293q-3.23-1.346-4.687-3.358-1.459-2.01-1.557-4.139l6.062-1.562a3.6 3.6 0 0 0-.033.565q0 1.43.86 2.743.862 1.313 2.767 2.16 1.904.849 4.853.849 2.947 0 4.62-.815 1.674-.814 1.674-2.277 0-1.13-.613-1.762-.614-.632-1.69-.98-1.076-.35-3.263-.816l-6.559-1.396q-3.71-.797-5.73-2.61-2.02-1.81-2.02-4.271-.001-2.094 1.324-3.84t4.008-2.81Q79.332.04 83.21.04q4.239 0 7.138 1.164t4.323 2.909 1.556 3.54l-6.061 1.662q.065-1.23-.663-2.41-.729-1.18-2.368-1.978-1.641-.798-4.157-.798-2.584 0-4.075.848-1.49.848-1.49 2.144-.001 1.164 1.175 1.878 1.176.716 3.362 1.147l7.09 1.43q4.47.897 6.343 2.826 1.87 1.928 1.871 4.72 0 2.427-1.59 4.156t-4.372 2.61q-2.783.88-6.294.88-5.135 0-8.364-1.346M105.069.505h12.124q6.56 0 9.673 1.828 3.113 1.83 3.114 5.552 0 3.723-3.114 5.551-3.114 1.83-9.673 1.829h-6.227v11.07h-5.897zm12.456 11.136q2.98 0 4.654-.914 1.673-.915 1.673-2.842t-1.673-2.843q-1.674-.914-4.654-.914h-6.559v7.513zm6.2 37.322q-5.891 0-5.892-5.045v-6.78h2.583v6.78q0 1.272.378 1.976.391.704 1.103.973.71.255 1.828.255t1.829-.255q.71-.27 1.088-.973.392-.704.392-1.976v-6.78h2.583v6.78q0 5.044-5.892 5.044M97.241 37.137h4.488l5.331 11.825h-2.789l-1.554-3.576h-6.478l-1.555 3.576H91.91zm4.75 6.575-2.136-4.916h-.74l-2.15 4.916zm-30.954-6.575h9.335v1.659h-6.798v3.44h6.385v1.659h-6.385v3.394H80.8v1.673h-9.763zm-23.23 0h5.337q2.886 0 4.258.837 1.37.837 1.37 2.542 0 2.298-3.222 2.678 1.516.198 1.968 1.416l.627 1.674q.117.335.438 1.218.335.867.437 1.096.117.227.234.364h-2.83a3 3 0 0 1-.306-.7q-.13-.456-.51-1.917l-.262-1.02q-.147-.548-.496-.852-.336-.32-1.006-.441-.672-.137-1.838-.137h-1.604v5.067h-2.595zm5.482 5.099q1.313 0 2.042-.411.744-.425.744-1.31 0-.882-.744-1.293-.73-.426-2.042-.426h-2.887v3.44zM30.3 48.963q-6.397 0-6.397-5.045v-6.78h2.805v6.78q0 1.272.41 1.976a2.2 2.2 0 0 0 1.197.973q.771.255 1.985.255t1.985-.255a2.14 2.14 0 0 0 1.182-.973q.425-.704.425-1.976v-6.78h2.805v6.78q0 5.044-6.397 5.044M0 37.137h5.427q2.95 0 4.33.807 1.393.806 1.393 2.496 0 .882-.445 1.415-.43.518-.904.73a3.6 3.6 0 0 1-.756.244q.326.046.86.274.547.213 1.038.807.504.593.504 1.598 0 1.72-1.409 2.587-1.394.867-4.315.867H0zM5.872 47.29q1.305 0 2.06-.457.772-.456.772-1.34 0-.868-.727-1.323-.727-.472-1.972-.472H2.64v3.592zm-.297-5.206q2.832 0 2.832-1.643t-2.832-1.644H2.639v3.287z"/>
+                        </g>
+                        <defs>
+                            <clipPath id="a"><path d="M0 0h130v49H0z"/></clipPath>
+                        </defs>
+                    </svg>
+                </a>
+
+                <nav class="header__nav">
+                    <div class="header__projects-menu" id="projectsMenuToggle">
+                        <div class="header__hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="./cases/cases-category.html" class="header__nav-item">Проєкти</a>
+                        
+                        <div class="header__dropdown" id="projectsDropdown">
+                            <ul class="header__dropdown-list">
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/restourants/index.html">Ресторани</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/hotels/index.html">Готелі</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/offices/index.html">Офіси</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/retail/index.html">Рітейл</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/wellness/index.html">Велнесс</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/coffee-shops/index.html">Кав'ярні</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="./about.html" class="header__nav-item">Про нас</a>
+                    <a href="services.html" class="header__nav-item">Послуги</a>
+                    <a href="blog.html" class="header__nav-item">Блог</a>
+                    <a href="#contacts" class="header__nav-item">Контакти</a>
+                </nav>
+                
+                <div class="header__mobile-menu" id="mobileMenuToggle">
+                    <div class="header__mobile-burger" id="mobileBurger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <div class="header__mobile-dropdown" id="mobileDropdown">
+                        <div class="header__mobile-logo">
+                            <svg width="130" height="49" viewBox="0 0 130 49" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#a)">
+                                    <path d="M0 .505h12.82q4.405 0 7.883 1.579 3.48 1.578 5.466 4.504 1.988 2.926 1.988 6.848 0 3.89-1.988 6.816t-5.466 4.504-7.883 1.58H0zm10.733 22.173q5.597 0 8.447-2.377 2.848-2.376 2.848-6.865 0-4.487-2.865-6.898t-8.43-2.41H5.896v18.55zM54.39.505H44.156l-12.157 25.83H44.97l2.48-4.314h-.01l.994-1.73.228-.395.085-.146H57.2l2.988 6.586h6.36zm-5.207 14.623-.002.004h-.518l-1.354 2.355-1.614 2.804-.995 1.73h-4.417l1.587-3.498 1.655-3.657 4.903-10.738h1.69l4.87 10.738.118.262zm27.45 10.293q-3.23-1.346-4.687-3.358-1.459-2.01-1.557-4.139l6.062-1.562a3.6 3.6 0 0 0-.033.565q0 1.43.86 2.743.862 1.313 2.767 2.16 1.904.849 4.853.849 2.947 0 4.62-.815 1.674-.814 1.674-2.277 0-1.13-.613-1.762-.614-.632-1.69-.98-1.076-.35-3.263-.816l-6.559-1.396q-3.71-.797-5.73-2.61-2.02-1.81-2.02-4.271-.001-2.094 1.324-3.84t4.008-2.81Q79.332.04 83.21.04q4.239 0 7.138 1.164t4.323 2.909 1.556 3.54l-6.061 1.662q.065-1.23-.663-2.41-.729-1.18-2.368-1.978-1.641-.798-4.157-.798-2.584 0-4.075.848-1.49.848-1.49 2.144-.001 1.164 1.175 1.878 1.176.716 3.362 1.147l7.09 1.43q4.47.897 6.343 2.826 1.87 1.928 1.871 4.72 0 2.427-1.59 4.156t-4.372 2.61q-2.783.88-6.294.88-5.135 0-8.364-1.346M105.069.505h12.124q6.56 0 9.673 1.828 3.113 1.83 3.114 5.552 0 3.723-3.114 5.551-3.114 1.83-9.673 1.829h-6.227v11.07h-5.897zm12.456 11.136q2.98 0 4.654-.914 1.673-.915 1.673-2.842t-1.673-2.843q-1.674-.914-4.654-.914h-6.559v7.513zm6.2 37.322q-5.891 0-5.892-5.045v-6.78h2.583v6.78q0 1.272.378 1.976.391.704 1.103.973.71.255 1.828.255t1.829-.255q.71-.27 1.088-.973.392-.704.392-1.976v-6.78h2.583v6.78q0 5.044-5.892 5.044M97.241 37.137h4.488l5.331 11.825h-2.789l-1.554-3.576h-6.478l-1.555 3.576H91.91zm4.75 6.575-2.136-4.916h-.74l-2.15 4.916zm-30.954-6.575h9.335v1.659h-6.798v3.44h6.385v1.659h-6.385v3.394H80.8v1.673h-9.763zm-23.23 0h5.337q2.886 0 4.258.837 1.37.837 1.37 2.542 0 2.298-3.222 2.678 1.516.198 1.968 1.416l.627 1.674q.117.335.438 1.218.335.867.437 1.096.117.227.234.364h-2.83a3 3 0 0 1-.306-.7q-.13-.456-.51-1.917l-.262-1.02q-.147-.548-.496-.852-.336-.32-1.006-.441-.672-.137-1.838-.137h-1.604v5.067h-2.595zm5.482 5.099q1.313 0 2.042-.411.744-.425.744-1.31 0-.882-.744-1.293-.73-.426-2.042-.426h-2.887v3.44zM30.3 48.963q-6.397 0-6.397-5.045v-6.78h2.805v6.78q0 1.272.41 1.976a2.2 2.2 0 0 0 1.197.973q.771.255 1.985.255t1.985-.255a2.14 2.14 0 0 0 1.182-.973q.425-.704.425-1.976v-6.78h2.805v6.78q0 5.044-6.397 5.044M0 37.137h5.427q2.95 0 4.33.807 1.393.806 1.393 2.496 0 .882-.445 1.415-.43.518-.904.73a3.6 3.6 0 0 1-.756.244q.326.046.86.274.547.213 1.038.807.504.593.504 1.598 0 1.72-1.409 2.587-1.394.867-4.315.867H0zM5.872 47.29q1.305 0 2.06-.457.772-.456.772-1.34 0-.868-.727-1.323-.727-.472-1.972-.472H2.64v3.592zm-.297-5.206q2.832 0 2.832-1.643t-2.832-1.644H2.639v3.287z"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="a"><path d="M0 0h130v49H0z"/></clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="header__mobile-nav">
+                            <a href="./cases/cases-category.html" class="header__mobile-nav-item">Проєкти</a>
+                            <a href="./about.html" class="header__mobile-nav-item">Про нас</a>
+                            <a href="services.html" class="header__mobile-nav-item">Послуги</a>
+                            <a href="blog.html" class="header__mobile-nav-item">Блог</a>
+                            <a href="#contacts" class="header__mobile-nav-item">Контакти</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="error-page">
+        <div class="error-content">
+            <div class="error-404">
+                <svg width="917" height="299" viewBox="0 0 917 299" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M176.279 224.343H0V176.8L162.519 5.2H233.552V187.943H293.055V224.343H233.552V293.8H176.279V224.343ZM176.279 187.943V52L50.9499 187.943H176.279Z" fill="black"/>
+                    <path d="M457.012 299C428.004 299 403.459 292.686 383.377 280.057C363.542 267.429 348.542 249.848 338.377 227.314C328.46 204.781 323.501 178.781 323.501 149.314C323.501 119.848 328.46 93.9714 338.377 71.6857C348.542 49.1524 363.542 31.5714 383.377 18.9429C403.459 6.31429 428.004 0 457.012 0C485.772 0 510.07 6.31429 529.904 18.9429C549.739 31.5714 564.615 49.1524 574.532 71.6857C584.697 94.219 589.78 120.095 589.78 149.314C589.78 178.781 584.697 204.781 574.532 227.314C564.615 249.848 549.739 267.429 529.904 280.057C510.07 292.686 485.772 299 457.012 299ZM383.377 149.314C383.377 182 389.203 208.248 400.856 228.057C412.757 247.867 431.475 257.771 457.012 257.771C482.301 257.771 500.772 247.867 512.425 228.057C524.326 208.248 530.276 182 530.276 149.314C530.276 116.876 524.326 90.7524 512.425 70.9429C500.772 51.1333 482.301 41.2286 457.012 41.2286C431.475 41.2286 412.757 51.1333 400.856 70.9429C389.203 90.5048 383.377 116.629 383.377 149.314Z" fill="black"/>
+                    <path d="M800.224 224.343H623.945V176.8L786.464 5.2H857.496V187.943H917V224.343H857.496V293.8H800.224V224.343ZM800.224 187.943V52L674.895 187.943H800.224Z" fill="black"/>
+                </svg>
+            </div>
+            
+            <h1 class="error-title">СТОРІНКУ НЕ ЗНАЙДЕНО</h1>
+            
+            <a href="index.html" class="error-back">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Повернутися назад
+            </a>
+        </div>
+    </main>
+
+    <script src="./js/mobile-menu.js"></script>
+</body>
+</html>

@@ -3,35 +3,710 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Блог - DASP</title>
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+    <title>DASP | Блог — студія дизайну інтер'єру</title>
+
+    <meta name="description" content="Розробка дизайн проекту для ремонту або будівництва. Дизайн квартир, будинків, офісів. Дизайн ресторанів, кафе, барів. Дизайн інтер'єрів будь-якого стилю та складності.">
+
+    <meta name="keywords" content="студія дизайну, дизайн інтер'єру, дизайн проект, авторський нагляд, консалтингові послуги, дизайн квартир, дизайн будинків, дизайн офісів, дизайн ресторанів, дизайн кафе, дизайн барів, архітектурний дизайн, інтер'єрний дизайн, дизайн інтер'єру Київ, ремонт під ключ, дизайн інтер'єру Україна">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dasp.com.ua/">
+    <meta property="og:title" content="DASP - Студія дизайну інтер'єру | Дизайн проект, авторський нагляд">
+    <meta property="og:description" content="Розробка дизайн проекту для ремонту або будівництва. Дизайн квартир, будинків, офісів. Дизайн ресторанів, кафе, барів. Дизайн інтер'єрів будь-якого стилю та складності.">
+    
+    <meta property="og:image" content="../favicon/web-app-manifest-512x512.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dasp.com.ua/">
+    <meta property="twitter:title" content="DASP - Студія дизайну інтер'єру | Дизайн проект, авторський нагляд">
+    <meta property="twitter:description" content="Розробка дизайн проекту для ремонту або будівництва. Дизайн квартир, будинків, офісів. Дизайн ресторанів, кафе, барів. Дизайн інтер'єрів будь-якого стилю та складності.">
+    <meta property="twitter:image" content="../favicon/web-app-manifest-512x512.png">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/x-icon" href="../favicon/favicon.ico?v=2">
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg?v=2">
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png?v=2" sizes="96x96">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="../favicon/web-app-manifest-192x192.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="../favicon/web-app-manifest-512x512.png">
+    <meta name="apple-mobile-web-app-title" content="DASP">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
+<body class="cases-page">
     <header class="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo">DASP</a>
-            <nav class="header__nav">
-                <a href="index.html" class="header__nav-item">Главная</a>
-                <a href="about.html" class="header__nav-item">О нас</a>
-                <a href="blog.html" class="header__nav-item">Блог</a>
-                <a href="#contact" class="header__nav-item">Контакты</a>
-            </nav>
-            <button class="header__mobile-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <div class="header__top">
+            <div class="container header__container">
+                <a href="./index.html" class="header__logo"><svg width="130" height="49" viewBox="0 0 130 49" fill="#080808" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M0 .505h12.82q4.405 0 7.883 1.579 3.48 1.578 5.466 4.504 1.988 2.926 1.988 6.848 0 3.89-1.988 6.816t-5.466 4.504-7.883 1.58H0zm10.733 22.173q5.597 0 8.447-2.377 2.848-2.376 2.848-6.865 0-4.487-2.865-6.898t-8.43-2.41H5.896v18.55zM54.39.505H44.156l-12.157 25.83H44.97l2.48-4.314h-.01l.994-1.73.228-.395.085-.146H57.2l2.988 6.586h6.36zm-5.207 14.623-.002.004h-.518l-1.354 2.355-1.614 2.804-.995 1.73h-4.417l1.587-3.498 1.655-3.657 4.903-10.738h1.69l4.87 10.738.118.262zm27.45 10.293q-3.23-1.346-4.687-3.358-1.459-2.01-1.557-4.139l6.062-1.562a3.6 3.6 0 0 0-.033.565q0 1.43.86 2.743.862 1.313 2.767 2.16 1.904.849 4.853.849 2.947 0 4.62-.815 1.674-.814 1.674-2.277 0-1.13-.613-1.762-.614-.632-1.69-.98-1.076-.35-3.263-.816l-6.559-1.396q-3.71-.797-5.73-2.61-2.02-1.81-2.02-4.271-.001-2.094 1.324-3.84t4.008-2.81Q79.332.04 83.21.04q4.239 0 7.138 1.164t4.323 2.909 1.556 3.54l-6.061 1.662q.065-1.23-.663-2.41-.729-1.18-2.368-1.978-1.641-.798-4.157-.798-2.584 0-4.075.848-1.49.848-1.49 2.144-.001 1.164 1.175 1.878 1.176.716 3.362 1.147l7.09 1.43q4.47.897 6.343 2.826 1.87 1.928 1.871 4.72 0 2.427-1.59 4.156t-4.372 2.61q-2.783.88-6.294.88-5.135 0-8.364-1.346M105.069.505h12.124q6.56 0 9.673 1.828 3.113 1.83 3.114 5.552 0 3.723-3.114 5.551-3.114 1.83-9.673 1.829h-6.227v11.07h-5.897zm12.456 11.136q2.98 0 4.654-.914 1.673-.915 1.673-2.842t-1.673-2.843q-1.674-.914-4.654-.914h-6.559v7.513zm6.2 37.322q-5.891 0-5.892-5.045v-6.78h2.583v6.78q0 1.272.378 1.976.391.704 1.103.973.71.255 1.828.255t1.829-.255q.71-.27 1.088-.973.392-.704.392-1.976v-6.78h2.583v6.78q0 5.044-5.892 5.044M97.241 37.137h4.488l5.331 11.825h-2.789l-1.554-3.576h-6.478l-1.555 3.576H91.91zm4.75 6.575-2.136-4.916h-.74l-2.15 4.916zm-30.954-6.575h9.335v1.659h-6.798v3.44h6.385v1.659h-6.385v3.394H80.8v1.673h-9.763zm-23.23 0h5.337q2.886 0 4.258.837 1.37.837 1.37 2.542 0 2.298-3.222 2.678 1.516.198 1.968 1.416l.627 1.674q.117.335.438 1.218.335.867.437 1.096.117.227.234.364h-2.83a3 3 0 0 1-.306-.7q-.13-.456-.51-1.917l-.262-1.02q-.147-.548-.496-.852-.336-.32-1.006-.441-.672-.137-1.838-.137h-1.604v5.067h-2.595zm5.482 5.099q1.313 0 2.042-.411.744-.425.744-1.31 0-.882-.744-1.293-.73-.426-2.042-.426h-2.887v3.44zM30.3 48.963q-6.397 0-6.397-5.045v-6.78h2.805v6.78q0 1.272.41 1.976a2.2 2.2 0 0 0 1.197.973q.771.255 1.985.255t1.985-.255a2.14 2.14 0 0 0 1.182-.973q.425-.704.425-1.976v-6.78h2.805v6.78q0 5.044-6.397 5.044M0 37.137h5.427q2.95 0 4.33.807 1.393.806 1.393 2.496 0 .882-.445 1.415-.43.518-.904.73a3.6 3.6 0 0 1-.756.244q.326.046.86.274.547.213 1.038.807.504.593.504 1.598 0 1.72-1.409 2.587-1.394.867-4.315.867H0zM5.872 47.29q1.305 0 2.06-.457.772-.456.772-1.34 0-.868-.727-1.323-.727-.472-1.972-.472H2.64v3.592zm-.297-5.206q2.832 0 2.832-1.643t-2.832-1.644H2.639v3.287z"/></g><defs><clipPath id="a"><path d="M0 0h130v49H0z"/></clipPath></defs></svg></a>
+
+                <nav class="header__nav">
+                    <div class="header__projects-menu" id="projectsMenuToggle">
+                        <div class="header__hamburger" id="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <a href="./cases/cases-category.html" class="header__nav-item" style="color: #080808;">Проєкти</a>
+                        
+                        <div class="header__dropdown" id="projectsDropdown">
+                            <ul class="header__dropdown-list">
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/restourants/index.html" style="color: #080808;">Ресторани</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/hotels/index.html" style="color: #080808;">Готелі</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/offices/index.html" style="color: #080808;">Офіси</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/retail/index.html" style="color: #080808;">Рітейл</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/wellness/index.html" style="color: #080808;">Велнесс</a>
+                                </li>
+                                <li class="header__dropdown-item">
+                                    <a href="./cases/coffee-shops/index.html" style="color: #080808;">Кав'ярні</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <a href="./about.html" class="header__nav-item" style="color: #080808;">Про нас</a>
+                    <a href="./services.html" class="header__nav-item" style="color: #080808;">Послуги</a>
+                    <a href="blog.html" class="header__nav-item" style="color: #080808;">Блог</a>
+                    <a href="#contacts" class="header__nav-item" style="color: #080808;">Контакти</a>
+                </nav>
+                
+                <div class="header__mobile-menu" id="mobileMenuToggle">
+                    <div class="header__mobile-burger blog__mobile-burger" id="mobileBurger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    
+                    <div class="header__mobile-dropdown" id="mobileDropdown">
+                        <div class="header__mobile-logo">
+                            <svg width="130" height="49" viewBox="0 0 130 49" fill="white" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><path d="M0 .505h12.82q4.405 0 7.883 1.579 3.48 1.578 5.466 4.504 1.988 2.926 1.988 6.848 0 3.89-1.988 6.816t-5.466 4.504-7.883 1.58H0zm10.733 22.173q5.597 0 8.447-2.377 2.848-2.376 2.848-6.865 0-4.487-2.865-6.898t-8.43-2.41H5.896v18.55zM54.39.505H44.156l-12.157 25.83H44.97l2.48-4.314h-.01l.994-1.73.228-.395.085-.146H57.2l2.988 6.586h6.36zm-5.207 14.623-.002.004h-.518l-1.354 2.355-1.614 2.804-.995 1.73h-4.417l1.587-3.498 1.655-3.657 4.903-10.738h1.69l4.87 10.738.118.262zm27.45 10.293q-3.23-1.346-4.687-3.358-1.459-2.01-1.557-4.139l6.062-1.562a3.6 3.6 0 0 0-.033.565q0 1.43.86 2.743.862 1.313 2.767 2.16 1.904.849 4.853.849 2.947 0 4.62-.815 1.674-.814 1.674-2.277 0-1.13-.613-1.762-.614-.632-1.69-.98-1.076-.35-3.263-.816l-6.559-1.396q-3.71-.797-5.73-2.61-2.02-1.81-2.02-4.271-.001-2.094 1.324-3.84t4.008-2.81Q79.332.04 83.21.04q4.239 0 7.138 1.164t4.323 2.909 1.556 3.54l-6.061 1.662q.065-1.23-.663-2.41-.729-1.18-2.368-1.978-1.641-.798-4.157-.798-2.584 0-4.075.848-1.49.848-1.49 2.144-.001 1.164 1.175 1.878 1.176.716 3.362 1.147l7.09 1.43q4.47.897 6.343 2.826 1.87 1.928 1.871 4.72 0 2.427-1.59 4.156t-4.372 2.61q-2.783.88-6.294.88-5.135 0-8.364-1.346M105.069.505h12.124q6.56 0 9.673 1.828 3.113 1.83 3.114 5.552 0 3.723-3.114 5.551-3.114 1.83-9.673 1.829h-6.227v11.07h-5.897zm12.456 11.136q2.98 0 4.654-.914 1.673-.915 1.673-2.842t-1.673-2.843q-1.674-.914-4.654-.914h-6.559v7.513zm6.2 37.322q-5.891 0-5.892-5.045v-6.78h2.583v6.78q0 1.272.378 1.976.391.704 1.103.973.71.255 1.828.255t1.829-.255q.71-.27 1.088-.973.392-.704.392-1.976v-6.78h2.583v6.78q0 5.044-5.892 5.044M97.241 37.137h4.488l5.331 11.825h-2.789l-1.554-3.576h-6.478l-1.555 3.576H91.91zm4.75 6.575-2.136-4.916h-.74l-2.15 4.916zm-30.954-6.575h9.335v1.659h-6.798v3.44h6.385v1.659h-6.385v3.394H80.8v1.673h-9.763zm-23.23 0h5.337q2.886 0 4.258.837 1.37.837 1.37 2.542 0 2.298-3.222 2.678 1.516.198 1.968 1.416l.627 1.674q.117.335.438 1.218.335.867.437 1.096.117.227.234.364h-2.83a3 3 0 0 1-.306-.7q-.13-.456-.51-1.917l-.262-1.02q-.147-.548-.496-.852-.336-.32-1.006-.441-.672-.137-1.838-.137h-1.604v5.067h-2.595zm5.482 5.099q1.313 0 2.042-.411.744-.425.744-1.31 0-.882-.744-1.293-.73-.426-2.042-.426h-2.887v3.44zM30.3 48.963q-6.397 0-6.397-5.045v-6.78h2.805v6.78q0 1.272.41 1.976a2.2 2.2 0 0 0 1.197.973q.771.255 1.985.255t1.985-.255a2.14 2.14 0 0 0 1.182-.973q.425-.704.425-1.976v-6.78h2.805v6.78q0 5.044-6.397 5.044M0 37.137h5.427q2.95 0 4.33.807 1.393.806 1.393 2.496 0 .882-.445 1.415-.43.518-.904.73a3.6 3.6 0 0 1-.756.244q.326.046.86.274.547.213 1.038.807.504.593.504 1.598 0 1.72-1.409 2.587-1.394.867-4.315.867H0zM5.872 47.29q1.305 0 2.06-.457.772-.456.772-1.34 0-.868-.727-1.323-.727-.472-1.972-.472H2.64v3.592zm-.297-5.206q2.832 0 2.832-1.643t-2.832-1.644H2.639v3.287z"/></g><defs><clipPath id="a"><path d="M0 0h130v49H0z"/></clipPath></defs></svg>
+                        </div>
+                        <div class="header__mobile-nav">
+                            <a href="./cases/cases-category.html" class="header__mobile-nav-item">Проєкти</a>
+                            <a href="./about.html" class="header__mobile-nav-item">Про нас</a>
+                            <a href="./services.html" class="header__mobile-nav-item">Послуги</a>
+                            <a href="blog.html" class="header__mobile-nav-item">Блог</a>
+                            <a href="#contacts" class="header__mobile-nav-item">Контакти</a>
+                        </div>
+                        
+                        <div class="header__mobile-contact">
+                            <div class="header__mobile-contact-item">
+                                <a href="mailto:ua.dasp@gmail.com">ua.dasp@gmail.com</a>
+                            </div>
+                            <div class="header__mobile-contact-item">
+                                <a href="tel:+380931709844">+38 (093) 170 98 44</a>
+                            </div>
+                            <div class="header__mobile-contact-item">
+                                <a href="tel:+380443339626">+38 (044) 333 96 26</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
+
+
     </header>
 
-    <main>
-        <!-- Ваш контент здесь -->
+    <main class="main">
+        <section class="cards section-margin">
+
+
+            <div class="cards__container">
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-1.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-2.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-3.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-4.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-5.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-6.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-7.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-8.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-9.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-10.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-11.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-12.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-13.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-14.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-15.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cards__wrapper" onclick="window.location.href='./case-1.html'">
+                    <div class="cards__item cases-page__item">
+                        <img src="./img/blog/blog-img-16.webp" alt="Ресторани" class="cards__image">
+                    </div>
+                    <div class="cards__footer cases-page__footer blog-cards__footer">
+                        <p class="cards__subtitle blog-cards__subtitle">
+                            Англійський домашній інтер'єр
+                        </p>
+                        <div class="cards__arrow blog-cards__arrow">
+                            <p class="cards__arrow-text">Правильний британський декор є чудовим джерелом натхнення, і, хоча в ньому чимало виразно чоловічих елементів, він також бездоганно підійде для великої родини. Основна привабливість правильного англійського дизайну інтер'єру — його довговічність</p>
+                            <a href="#" class="cards__arrow-link blog-cards__arrow-link">
+                                
+                                Читати більше
+
+                                <svg class="blog-cards__arrow-link-icon" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_700_2405)">
+                                    <path d="M12 4.5L10.59 5.91L16.17 11.5H4V13.5H16.17L10.59 19.09L12 20.5L20 12.5L12 4.5Z" fill="#080808"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_700_2405">
+                                    <rect width="24" height="24" fill="white" transform="translate(0 0.5)"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                    </div>
+                </div>
+ 
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
+    <footer class="footer section-margin">
         <div class="footer__container">
-            <!-- Ваш контент футера здесь -->
+            <div class="footer__top">
+                <svg style="width: clamp(327px, 100%, 1220px); height: auto;" viewBox="0 0 1220 425" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_604_1119)">
+                    <path d="M0 4.70262H120.306C147.867 4.70262 172.532 9.61193 194.293 19.4224C216.054 29.2363 233.152 43.2345 245.586 61.4118C258.022 79.593 264.238 100.873 264.238 125.247C264.238 149.418 258.022 170.597 245.586 188.774C233.152 206.956 216.054 220.954 194.293 230.763C172.532 240.578 147.867 245.483 120.306 245.483H0V4.70262ZM100.722 211.396C135.743 211.396 162.167 204.012 179.993 189.239C197.815 174.472 206.727 153.137 206.727 125.247C206.727 97.3576 197.761 75.9269 179.838 60.9464C161.909 45.9703 135.539 38.4795 100.722 38.4795H55.3348V211.396H100.722Z" fill="#F1F1F1"/>
+                    <path d="M510.434 4.70516H414.379L300.287 245.486H359.67V245.474H422.033L445.306 205.264H445.211L454.549 189.142L456.688 185.465L457.48 184.099H536.8L564.842 245.486H624.526L510.434 4.70516ZM461.564 141.014L461.543 141.05H456.688L419.498 205.264H378.042L408.467 138.571L454.475 38.483H470.339L517.151 141.015L461.564 141.014Z" fill="#F1F1F1"/>
+                    <path d="M719.168 236.963C698.964 228.596 684.3 218.167 675.184 205.664C666.058 193.167 661.191 180.307 660.571 167.083L717.461 152.519C717.249 153.758 717.149 155.516 717.149 157.786C717.149 166.672 719.839 175.193 725.231 183.352C730.618 191.516 739.271 198.226 751.19 203.494C763.104 208.763 778.284 211.397 796.733 211.397C815.174 211.397 829.63 208.869 840.098 203.804C850.561 198.744 855.797 191.671 855.797 182.577C855.797 175.557 853.879 170.08 850.046 166.153C846.209 162.232 840.925 159.181 834.191 157.012C827.456 154.842 817.248 152.316 803.571 149.419L742.017 136.405C718.804 131.447 700.878 123.341 688.237 112.079C675.595 100.821 669.276 87.5495 669.276 72.2586C669.276 59.2433 673.417 47.3134 681.71 36.4664C689.995 25.6207 702.537 16.8958 719.324 10.281C736.11 3.67203 756.629 0.365234 780.878 0.365234C807.404 0.365234 829.734 3.982 847.872 11.2109C866.001 18.4445 879.526 27.4806 888.439 38.3262C897.347 49.1719 902.22 60.1732 903.047 71.3287L846.161 86.8229C846.573 79.1825 844.498 71.6914 839.942 64.3561C835.382 57.0256 827.976 50.8763 817.716 45.9176C807.456 40.9605 794.451 38.4807 778.704 38.4807C762.537 38.4807 749.791 41.1149 740.462 46.3834C731.138 51.6516 726.474 58.3134 726.474 66.3705C726.474 73.6051 730.151 79.4398 737.513 83.8786C744.867 88.3236 755.387 91.8878 769.063 94.57L835.589 107.896C863.567 113.473 883.411 122.256 895.121 134.235C906.828 146.219 912.687 160.885 912.687 178.239C912.687 193.322 907.711 206.235 897.763 216.975C887.815 227.72 874.138 235.829 856.728 241.301C839.318 246.772 819.63 249.512 797.664 249.512C765.538 249.512 739.375 245.33 719.168 236.963Z" fill="#F1F1F1"/>
+                    <path d="M986.035 4.70262H1099.81C1140.85 4.70262 1171.1 10.3874 1190.59 21.7466C1210.07 33.1105 1219.81 50.3617 1219.81 73.4964C1219.81 96.6371 1210.07 113.888 1190.59 125.247C1171.1 136.612 1140.85 142.291 1099.81 142.291H1041.37V245.483H986.035V4.70262ZM1102.92 108.514C1121.58 108.514 1136.13 105.677 1146.6 99.9919C1157.06 94.3127 1162.3 85.4812 1162.3 73.4964C1162.3 61.5185 1157.06 52.6856 1146.6 47.0021C1136.13 41.3219 1121.58 38.4795 1102.92 38.4795H1041.37V108.514H1102.92Z" fill="#F1F1F1"/>
+                    <path d="M1161.11 423.356C1124.25 423.356 1105.82 407.684 1105.82 376.334V313.125H1130.06V376.334C1130.06 384.241 1131.24 390.38 1133.6 394.752C1136.06 399.123 1139.5 402.15 1143.95 403.82C1148.4 405.405 1154.12 406.195 1161.11 406.195C1168.1 406.195 1173.82 405.405 1178.27 403.82C1182.72 402.15 1186.12 399.123 1188.48 394.752C1190.94 390.38 1192.16 384.241 1192.16 376.334V313.125H1216.41V376.334C1216.41 407.684 1197.97 423.356 1161.11 423.356Z" fill="#F1F1F1"/>
+                    <path d="M912.57 313.125H954.692L1004.72 423.356H978.546L963.96 390.018H903.164L888.577 423.356H862.54L912.57 313.125ZM957.143 374.412L937.105 328.589H930.154L909.98 374.412H957.143Z" fill="#F1F1F1"/>
+                    <path d="M666.652 313.125H754.265V328.589H690.463V360.651H750.384V376.115H690.463V407.753H758.28V423.356H666.652V313.125Z" fill="#F1F1F1"/>
+                    <path d="M448.65 313.125H498.732C516.796 313.125 530.117 315.726 538.693 320.928C547.268 326.13 551.555 334.027 551.555 344.62C551.555 358.901 541.473 367.224 521.313 369.589C530.802 370.818 536.96 375.216 539.788 382.783L545.67 398.388C546.401 400.47 547.77 404.252 549.775 409.739C551.876 415.127 553.244 418.533 553.881 419.954C554.613 421.37 555.34 422.505 556.072 423.356H529.524C528.519 421.845 527.562 419.669 526.648 416.832C525.83 413.992 524.232 408.034 521.859 398.955L519.399 389.451C518.485 386.046 516.934 383.397 514.743 381.506C512.647 379.519 509.498 378.148 505.302 377.391C501.105 376.54 495.358 376.115 488.061 376.115H473.007V423.356H448.65V313.125ZM500.1 360.651C508.312 360.651 514.7 359.374 519.26 356.821C523.911 354.172 526.241 350.105 526.241 344.62C526.241 339.134 523.911 335.115 519.26 332.561C514.7 329.913 508.312 328.589 500.1 328.589H473.007V360.651H500.1Z" fill="#F1F1F1"/>
+                    <path d="M269.628 424.65C229.608 424.65 209.598 408.979 209.598 377.629V314.42H235.916V377.629C235.916 385.536 237.198 391.675 239.761 396.047C242.422 400.418 246.168 403.445 250.998 405.115C255.828 406.7 262.038 407.49 269.628 407.49C277.218 407.49 283.428 406.7 288.258 405.115C293.088 403.445 296.785 400.418 299.347 396.047C302.009 391.675 303.34 385.536 303.34 377.629V314.42H329.659V377.629C329.659 408.979 309.648 424.65 269.628 424.65Z" fill="#F1F1F1"/>
+                    <path d="M0 313.125H50.9282C69.3889 313.125 82.9323 315.631 91.5598 320.644C100.279 325.657 104.64 333.412 104.64 343.91C104.64 349.396 103.248 353.794 100.465 357.104C97.775 360.32 94.9456 362.59 91.9773 363.914C89.0085 365.144 86.643 365.9 84.8803 366.184C86.9214 366.468 89.6117 367.319 92.9513 368.737C96.3835 370.062 99.6303 372.568 102.691 376.256C105.845 379.945 107.423 384.911 107.423 391.153C107.423 401.839 103.016 409.877 94.2033 415.27C85.4836 420.662 71.9861 423.356 53.7112 423.356H0V313.125ZM55.1027 407.753C63.2663 407.753 69.7132 406.333 74.4443 403.497C79.2684 400.656 81.6802 396.497 81.6802 391.011C81.6802 385.62 79.4074 381.506 74.8617 378.668C70.3165 375.736 64.1477 374.271 56.3552 374.271H24.7685V407.753H55.1027ZM52.3197 359.232C70.038 359.232 78.8972 354.125 78.8972 343.91C78.8972 333.696 70.038 328.589 52.3197 328.589H24.7685V359.232H52.3197Z" fill="#F1F1F1"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_604_1119">
+                    <rect width="1220" height="425" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                
+                <div class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a href="./index.html" class="footer__nav-link">Головна</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="./cases/cases-category.html" class="footer__nav-link">Проєкти</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="./about.html" class="footer__nav-link">Про нас</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a href="#top" class="footer__nav-link">Блог</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer__middle">
+                <div class="footer__middle-links">
+                    <a href="https://www.facebook.com/daspbureau" target="_blank" rel="noopener noreferrer">
+                        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" clip-rule="evenodd" d="M33 65c17.673 0 32-14.327 32-32S50.673 1 33 1 1 15.327 1 33s14.327 32 32 32Z" stroke="#F1F1F1" stroke-width="1.5"/><path d="M38.063 20.2h5.063c.466 0 .844-.359.844-.8v-4.8c0-.442-.378-.8-.844-.8h-5.063c-5.118 0-9.283 3.947-9.283 8.8v5.6h-5.908c-.465 0-.843.358-.843.8v4.8c0 .441.378.8.843.8h5.908v16.8c0 .441.378.8.844.8h5.063c.466 0 .844-.359.844-.8V34.6h5.908a.845.845 0 0 0 .801-.547l1.688-4.8a.77.77 0 0 0-.116-.722.86.86 0 0 0-.686-.331h-7.595v-5.6c0-1.323 1.136-2.4 2.532-2.4" fill="#F1F1F1"/></svg>
+                    </a>
+
+                    <a href="https://www.instagram.com/dasp_bureau/" target="_blank" rel="noopener noreferrer">
+                        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M33 65C50.6731 65 65 50.6731 65 33C65 15.3269 50.6731 1 33 1C15.3269 1 1 15.3269 1 33C1 50.6731 15.3269 65 33 65Z" stroke="#F1F1F1" stroke-width="1.5"/>
+                            <g clip-path="url(#clip0_319_1109)">
+                            <path d="M41.3273 17H26.2721C21.1595 17 17 21.1597 17 26.2723V41.3275C17 46.4403 21.1595 50.5998 26.2721 50.5998H41.3273C46.4403 50.5998 50.5998 46.4401 50.5998 41.3275V26.2723C50.6 21.1597 46.4403 17 41.3273 17ZM47.6189 41.3275C47.6189 44.7965 44.7965 47.6187 41.3275 47.6187H26.2721C22.8033 47.6189 19.9811 44.7965 19.9811 41.3275V26.2723C19.9811 22.8035 22.8033 19.9811 26.2721 19.9811H41.3273C44.7963 19.9811 47.6187 22.8035 47.6187 26.2723V41.3275H47.6189Z" fill="#F1F1F1"/>
+                            <rect x="18" y="19" width="31" height="29" rx="6" fill="#F1F1F1"/>
+                            <path d="M42.8209 22.6143C42.2466 22.6143 41.6823 22.8468 41.2767 23.2542C40.8691 23.6596 40.6348 24.2241 40.6348 24.8004C40.6348 25.375 40.8693 25.9392 41.2767 26.3466C41.6821 26.7521 42.2466 26.9866 42.8209 26.9866C43.3973 26.9866 43.9597 26.7521 44.3672 26.3466C44.7746 25.9392 45.0071 25.3748 45.0071 24.8004C45.0071 24.2241 44.7746 23.6596 44.3672 23.2542C43.9617 22.8468 43.3973 22.6143 42.8209 22.6143Z" fill="black"/>
+                            <path d="M33.7999 25.1421C29.0259 25.1421 25.1421 29.0259 25.1421 33.7999C25.1421 38.5737 29.0259 42.4573 33.7999 42.4573C38.5739 42.4573 42.4577 38.5737 42.4577 33.7999C42.4577 29.0259 38.5739 25.1421 33.7999 25.1421ZM33.7999 39.476C30.6699 39.476 28.1232 36.9297 28.1232 33.7997C28.1232 30.6695 30.6697 28.123 33.7999 28.123C36.9301 28.123 39.4766 30.6695 39.4766 33.7997C39.4766 36.9297 36.9299 39.476 33.7999 39.476Z" fill="black"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_319_1109">
+                            <rect width="33.6" height="33.6" fill="white" transform="translate(17 17)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                    </a>
+
+                    <a href="https://www.behance.net/DASP_Bureau" target="_blank" rel="noopener noreferrer">
+                        <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity=".2" clip-rule="evenodd" d="M33 65c17.673 0 32-14.327 32-32S50.673 1 33 1 1 15.327 1 33s14.327 32 32 32Z" stroke="#F1F1F1" stroke-width="1.5"/><path fill-rule="evenodd" clip-rule="evenodd" d="M38.282 25.005h10.063V22.09H38.282zm2.384 6.357q-.962.989-1.211 2.68h7.826c-.082-1.203-.489-2.112-1.208-2.738-.729-.622-1.625-.931-2.697-.931-1.162 0-2.069.33-2.71.989m6.792-3.911q1.82.809 2.998 2.561 1.074 1.544 1.388 3.58c.123.792.172 1.942.152 3.436H39.343c.076 1.735.675 2.954 1.819 3.65q1.038.653 2.504.654c1.03 0 1.873-.266 2.518-.793q.534-.431.937-1.192h4.636c-.123 1.024-.686 2.07-1.683 3.13Q47.741 44.998 43.541 45q-3.47.002-6.115-2.13c-1.772-1.418-2.652-3.73-2.652-6.929q.001-4.5 2.39-6.902c1.598-1.597 3.665-2.402 6.21-2.402q2.268 0 4.084.814M18.68 34.104v6.243h5.702c1.018 0 1.814-.138 2.379-.412 1.03-.512 1.544-1.483 1.544-2.922q.002-1.83-1.495-2.513-.839-.382-2.348-.396zm0-9.039v5.165h5.71q1.526 0 2.485-.581.953-.583.954-2.054 0-1.638-1.26-2.165-1.093-.364-2.777-.365zm12.753-1.57q1.076 1.492 1.077 3.572.002 2.144-1.086 3.448-.61.73-1.792 1.332c1.198.437 2.1 1.125 2.715 2.067q.912 1.411.913 3.43 0 2.082-1.047 3.734a6.5 6.5 0 0 1-1.663 1.842q-1.12.857-2.652 1.176-1.53.315-3.318.314H14V21h11.348q4.294.063 6.086 2.495" fill="#fff"/></svg>
+                    </a>
+                </div>
+                <div class="footer__middle-contacts" id="contacts">
+                    <p class="footer__middle-text">Контакти:</p>
+
+                    <div class="footer__middle-contacts-items">
+                        <a href="mailto:ua.dasp@gmail.com" class="footer__middle-email">ua.dasp@gmail.com</a>
+                        <a href="tel:+38 (093) 170 98 44" class="footer__middle-phone">+38 (093) 170 98 44</a>
+                        <a href="+38 (044) 333 96 26" class="footer__middle-phone">+38 (044) 333 96 26</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="website-by">
+                    <p class="website-by-text">Сайт створений:</p>
+                    <a href="https://www.instagram.com/dasp_bureau/" target="_blank" rel="noopener noreferrer">Krapka Agency</a>
+                </div>
+                <p class="footer__bottom-text">Copyright 2025. All rights reserved.</p>
+
+                <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+            </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="../js/header-scroll.js"></script>
+    <script src="../js/testimonials-slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 </body>
 </html>

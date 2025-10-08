@@ -5,8 +5,10 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
     
     if (!toggle || !burger || !dropdown) return;
     
-    toggle.addEventListener('click', (e) => {
+    // Обработчик только для гамбургера (не для всего toggle)
+    burger.addEventListener('click', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         burger.classList.toggle('active');
         dropdown.classList.toggle('active');
     });

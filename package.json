@@ -4,7 +4,9 @@
   "scripts": {
     "build": "npm run build:css",
     "build:css": "sass scss:css --style=compressed --no-source-map",
-    "dev": "sass scss:css --watch"
+    "dev": "sass scss:css --watch",
+    "serve": "node server.js",
+    "start": "npm run build && npm run serve"
   },
   "devDependencies": {
     "sass": "^1.66.1"
