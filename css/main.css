@@ -4678,4 +4678,103 @@ body {
   background-color: #080808;
 }
 
+.blog-page-1__container {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blog-page-1__item {
+  color: #666666;
+  line-height: 135%;
+}
+
+.blog-page-1__title {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  font-family: "SportingGrotesque", sans-serif;
+  margin: 0;
+  text-align: left;
+  max-width: 100%;
+}
+
+.blog-page-1 {
+  max-width: 600px;
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .blog-page-1 {
+    padding: 0 24px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-page-1 {
+    padding: 0 20px;
+    margin-top: 128px;
+  }
+}
+
+.blog-page-1__image {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.blog-page-1__header-container {
+  gap: 16px;
+}
+
+.concept-case__description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blog-page_description-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  font-family: "Inter", sans-serif;
+  color: #080808;
+  margin-bottom: 16px;
+}
+
+.blog-page-1__title {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.blog-page-1__conclusion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.blog-page-1__conclusion-text {
+  color: #666666;
+  font-size: 16px;
+  line-height: 135%;
+  color: #666666;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reverse-order {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767px) {
+  .reverse-order {
+    flex-direction: column-reverse;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
