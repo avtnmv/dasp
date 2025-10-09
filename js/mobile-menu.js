@@ -2,11 +2,21 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
     const toggle = document.getElementById(toggleId);
     const burger = document.getElementById(burgerId);
     const dropdown = document.getElementById(dropdownId);
+    const headerContainer = document.querySelector('.header__container');
     
     if (!toggle || !burger || !dropdown) return;
     
     // Флаг для предотвращения множественных кликов
     let isAnimating = false;
+    
+    // Функция для управления состоянием меню
+    function toggleMenuState(isActive) {
+        burger.classList.toggle('active', isActive);
+        dropdown.classList.toggle('active', isActive);
+        if (headerContainer) {
+            headerContainer.classList.toggle('active', isActive);
+        }
+    }
     
     // Обработчик только для гамбургера (не для всего toggle)
     burger.addEventListener('click', (e) => {
@@ -16,8 +26,8 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
         if (isAnimating) return;
         
         isAnimating = true;
-        burger.classList.toggle('active');
-        dropdown.classList.toggle('active');
+        const isCurrentlyActive = burger.classList.contains('active');
+        toggleMenuState(!isCurrentlyActive);
         
         // Сбрасываем флаг после завершения анимации
         setTimeout(() => {
@@ -27,16 +37,14 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
     
     document.addEventListener('click', (e) => {
         if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
-            burger.classList.remove('active');
-            dropdown.classList.remove('active');
+            toggleMenuState(false);
         }
     });
     
     const closeItems = dropdown.querySelectorAll(closeSelector);
     closeItems.forEach(item => {
         item.addEventListener('click', () => {
-            burger.classList.remove('active');
-            dropdown.classList.remove('active');
+            toggleMenuState(false);
         });
     });
 }
@@ -59,6 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
             isClosingMenu = true;
             mobileBurger.classList.remove('active');
             mobileDropdown.classList.remove('active');
+            
+            // Убираем класс active с header__container
+            const headerContainer = document.querySelector('.header__container');
+            if (headerContainer) {
+                headerContainer.classList.remove('active');
+            }
             
             // Принудительно устанавливаем стили для закрытия
             mobileDropdown.style.opacity = '0';
