@@ -221,6 +221,8 @@ body {
 .header__container.active .header__logo svg {
   fill: #ffffff !important;
   color: #ffffff !important;
+  position: relative;
+  z-index: 1234567;
 }
 
 .header__logo {
