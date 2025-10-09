@@ -5265,6 +5265,13 @@ body {
 .privacy-policy__title {
   margin-bottom: 32px;
 }
+@media (max-width: 767px) {
+  .privacy-policy__title {
+    font-size: 24px;
+    text-align: left;
+    margin-top: 64px;
+  }
+}
 
 .privacy-policy__last-update {
   text-align: center;
@@ -5272,6 +5279,11 @@ body {
   font-size: 20px;
   margin-bottom: 24px;
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .privacy-policy__last-update {
+    text-align: left;
+  }
 }
 
 .privacy-policy__text {

@@ -147,6 +147,12 @@
 
 .privacy-policy__title{
     margin-bottom: 32px;
+
+    @include mobile{
+        font-size: 24px;
+        text-align: left;
+        margin-top: 64px;
+    }
 }
 
 .privacy-policy__last-update{
@@ -155,6 +161,10 @@
     font-size: 20px;
     margin-bottom: 24px;
     font-weight: 500;
+
+    @include mobile{
+        text-align: left;
+    }
 
 }
 
