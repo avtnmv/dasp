@@ -291,6 +291,8 @@ body {
   transition: all 0.3s ease;
   z-index: 1000;
   overflow-y: auto;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 @supports (-webkit-touch-callout: none) {
   .header__mobile-dropdown {
@@ -400,7 +402,7 @@ body {
 }
 @media (max-width: 767px) {
   .header__mobile-nav-item {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 
@@ -712,7 +714,7 @@ body {
 @media (max-width: 767px) {
   .header__mobile-left-column-container {
     flex-direction: column;
-    gap: 45px;
+    gap: 32px;
   }
 }
 
@@ -4234,6 +4236,10 @@ body {
 @media (max-width: 767px) {
   .cases-page__title {
     margin-bottom: 32px;
+  }
+  .cases-page__title svg {
+    height: 23px;
+    width: 16px;
   }
 }
 

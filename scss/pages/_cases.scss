@@ -43,6 +43,11 @@
 
     @include mobile {
         margin-bottom: 32px;
+
+        svg{
+            height: 23px;
+            width: 16px;
+        }
     }
 
     

@@ -144,6 +144,8 @@
     transition: all 0.3s ease;
     z-index: 1000;
     overflow-y: auto;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     
     @supports (-webkit-touch-callout: none) {
         height: 100vh;
@@ -183,6 +185,7 @@
         .header__mobile-burger span {
             background-color: $color-white !important;
         }
+
         
     }
 
@@ -250,7 +253,7 @@
     }
 
     @include mobile {
-        font-size: 32px;
+        font-size: 24px;
     }
 
 }
@@ -575,6 +578,6 @@
 
     @include mobile {
         flex-direction: column;
-        gap: 45px;
+        gap: 32px;
     }
 }
