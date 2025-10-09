@@ -427,7 +427,6 @@
     .swiper {
         overflow: hidden;
         position: relative;
-        height: 400px; // Фиксированная высота для контейнера
     }
     
     .swiper-wrapper {
@@ -1273,11 +1272,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 24px;
 
 
     @include mobile{
-        gap: 24px;
+        gap: 16px;
     }
 }
 
