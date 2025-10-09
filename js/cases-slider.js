@@ -5,7 +5,7 @@ const swiper = new Swiper('.cases-swiper', {
     loop: true,
     speed: 600,
     autoplay: {
-      delay: 1500,
+      delay: 1600,
       disableOnInteraction: false,
     },
   
