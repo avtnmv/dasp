@@ -5,12 +5,24 @@ function initMenu(toggleId, burgerId, dropdownId, closeSelector) {
     
     if (!toggle || !burger || !dropdown) return;
     
+    // Флаг для предотвращения множественных кликов
+    let isAnimating = false;
+    
     // Обработчик только для гамбургера (не для всего toggle)
     burger.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+        
+        if (isAnimating) return;
+        
+        isAnimating = true;
         burger.classList.toggle('active');
         dropdown.classList.toggle('active');
+        
+        // Сбрасываем флаг после завершения анимации
+        setTimeout(() => {
+            isAnimating = false;
+        }, 300);
     });
     
     document.addEventListener('click', (e) => {
@@ -38,9 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBurger = document.getElementById('mobileBurger');
     const mobileDropdown = document.getElementById('mobileDropdown');
     
+    // Флаг для предотвращения конфликтов при закрытии меню
+    let isClosingMenu = false;
+    
     // Функция для закрытия меню
     function closeMobileMenu() {
-        if (mobileBurger && mobileDropdown) {
+        if (mobileBurger && mobileDropdown && !isClosingMenu) {
+            isClosingMenu = true;
             mobileBurger.classList.remove('active');
             mobileDropdown.classList.remove('active');
             
@@ -48,6 +64,16 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileDropdown.style.opacity = '0';
             mobileDropdown.style.visibility = 'hidden';
             mobileDropdown.style.transform = 'translateX(100%)';
+            
+            // Убираем стили после завершения анимации
+            setTimeout(() => {
+                if (mobileDropdown) {
+                    mobileDropdown.style.opacity = '';
+                    mobileDropdown.style.visibility = '';
+                    mobileDropdown.style.transform = '';
+                }
+                isClosingMenu = false;
+            }, 300);
         }
     }
     
@@ -77,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Mobile nav link clicked:', link);
             const href = link.getAttribute('href');
             console.log('Link href:', href);
+            
             if (href && href.startsWith('#')) {
                 e.preventDefault();
                 closeMobileMenu();
@@ -88,6 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             behavior: 'smooth',
                             block: 'start'
                         });
+                    } else {
+                        // Если элемент не найден на текущей странице, переходим на главную
+                        console.log('Target element not found, redirecting to main page');
+                        window.location.href = 'index.html' + href;
                     }
                 }, 300);
             } else if (href && !href.startsWith('#')) {
@@ -100,6 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.log('Navigating to:', href);
                     window.location.href = href;
                 }, 300);
+            } else {
+                // Если это обычная ссылка без href или с пустым href, просто закрываем меню
+                closeMobileMenu();
             }
         });
     });
@@ -113,10 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             
             // Закрываем мобильное меню если оно открыто
-            if (mobileBurger && mobileDropdown) {
-                mobileBurger.classList.remove('active');
-                mobileDropdown.classList.remove('active');
-            }
+            closeMobileMenu();
             
             // Переходим к форме
             if (requestForm) {
@@ -126,6 +157,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         block: 'start'
                     });
                 }, 100);
+            } else {
+                // Если форма не найдена на текущей странице, переходим на главную
+                window.location.href = 'index.html#request';
             }
         });
     });

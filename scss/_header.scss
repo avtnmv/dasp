@@ -47,6 +47,9 @@
             height: 37px;
             fill: $color-black;
             color: $color-black;
+            position: relative;
+            z-index: 1234567;
+
         }
 
         .header__mobile-menu span {
@@ -151,6 +154,34 @@
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+
+        .header__logo svg {
+            fill: white !important;
+            color: white !important;
+        }
+        
+    }
+
+    // Desktop full-screen layout
+    @include desktop {
+        padding: 120px 80px 60px;
+        display: grid;
+        grid-template-columns: minmax(360px, 520px) 1fr;
+        column-gap: 80px;
+        align-content: start;
+        min-height: 100vh;
+    }
+
+    @include large-desktop {
+        padding: 140px 0 80px;
+        display: grid;
+        grid-template-columns: minmax(360px, 520px) 1fr;
+        column-gap: 120px;
+        align-content: start;
+        min-height: 100vh;
     }
 }
 
@@ -158,7 +189,21 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-bottom: 32px;
+    justify-content: space-between;
+
+    // Place navigation on the right for desktop
+    @include desktop {
+        grid-column: 2;
+        align-items: flex-start;
+        justify-self: end;
+        gap: 36px;
+        margin: 0;
+        
+    }
+
+    @include large-desktop {
+        gap: 40px;
+    }
 }
 
 .header__mobile-nav-item {
@@ -172,10 +217,96 @@
     &:hover {
         opacity: 0.7;
     }
+
+    @include large-desktop {
+        font-size: 86px;
+        line-height: 1.1;
+    }
+
+    @include desktop {
+        font-size: 86px;
+        line-height: 1.11;
+    }
+}
+
+.header__mobile-left-column {
+    // Left column on desktop
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include desktop {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+}
+
+.header__mobile-block {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.header__mobile-block--contacts {
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+.header__mobile-block--description {
+    @include desktop {
+        gap: 20px;
+    }
+}
+
+.header__mobile-social {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    @include desktop {
+        margin-bottom: 0;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    a {
+        display: block;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.7;
+        }
+
+        svg {
+            width: 40px;
+            height: 40px;
+
+            @include desktop {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
 }
 
 .header__mobile-contact {
     margin-bottom: 32px;
+
+    @include desktop {
+        margin-bottom: 0;
+    }
 }
 
 .header__mobile-contact-item {
@@ -195,12 +326,20 @@
 }
 
 .header__mobile-description {
+    display: flex;
+    flex-direction: column;
     p {
         color: $color-white;
         font-size: 18px;
         margin: 0 0 30px 0;
         opacity: 0.8;
         line-height: 1.4;
+    }
+
+    @include desktop {
+        margin-top: 0;
+        max-width: 420px;
+        text-align: center;
     }
 }
 
@@ -219,6 +358,12 @@
         background: $color-white;
         color: $color-black;
     }
+
+    @include desktop {
+        width: auto;
+        padding: 16px 32px;
+        font-size: 20px;
+    }
 }
 
 .header__mobile-burger {
@@ -229,6 +374,15 @@
     cursor: pointer;
     position: relative;
     z-index: 1001;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        right: -12px;
+        bottom: -12px;
+    }
     
     span {
         display: block;
@@ -337,5 +491,37 @@
         fill: $color-white !important;
         color: $color-white !important;
     }
+
+    @include desktop {
+        top: 40px;
+        left: 40px;
+        svg {
+            width: 130px !important;
+            height: 49px !important;
+        }
+    }
 }
 
+.header__mobile-left-column-container{
+    max-height: 600px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 200px;
+
+    @include desktop {
+        max-height: 600px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 200px;
+    }
+
+    @include tablet {
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 45px;
+    }
+}
