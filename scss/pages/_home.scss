@@ -443,10 +443,18 @@
       
       @include mobile {
         transform: scale(1);
+        opacity: 1;
+        filter: none;
+        transition: none;
+        height: 230px;
       }
 
       @include tablet {
         transform: scale(1);
+        opacity: 1;
+        filter: none;
+        transition: none;
+        height: 300px;
       }
       
       &::after {
@@ -461,6 +469,14 @@
         z-index: 1;
         opacity: 1;
         transition: opacity 0.3s ease;
+
+        @include mobile {
+          display: none;
+        }
+
+        @include tablet {
+          display: none;
+        }
       }
   
       &.swiper-slide-prev,
@@ -472,10 +488,14 @@
         
         @include mobile {
           transform: scale(1);
+          opacity: 1;
+          filter: none;
         }
 
         @include tablet {
           transform: scale(1);
+          opacity: 1;
+          filter: none;
         }
         
         &::after {
@@ -493,11 +513,15 @@
         @include mobile {
           transform: scale(1);
           height: 230px;
+          opacity: 1;
+          filter: none;
         }
 
         @include tablet {
           transform: scale(1);
           height: 300px;
+          opacity: 1;
+          filter: none;
         }
 
         @include desktop {
