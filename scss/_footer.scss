@@ -45,6 +45,22 @@
     justify-content: space-between;
     gap: 32px;
 
+    svg {
+        fill: $color-white !important;
+        
+        path {
+            fill: $color-white !important;
+        }
+        
+        g {
+            fill: $color-white !important;
+            
+            path {
+                fill: $color-white !important;
+            }
+        }
+    }
+
     @include tablet{
         flex-direction: column;
     }

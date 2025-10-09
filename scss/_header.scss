@@ -69,8 +69,6 @@
         .header__logo svg {
             fill: $color-white !important;
             color: $color-white !important;
-            position: relative;
-            z-index: 1234567;
         }
     }
 }
@@ -179,6 +177,9 @@
         @include tablet {
             justify-content: flex-end;
         }
+        .header__mobile-burger span {
+            background-color: $color-white !important;
+        }
         
     }
 
@@ -209,7 +210,6 @@
     gap: 20px;
     justify-content: space-between;
 
-    // Place navigation on the right for desktop
     @include desktop {
         grid-column: 2;
         align-items: flex-start;
@@ -426,19 +426,19 @@
         display: block;
         width: 100%;
         height: 2px;
-        background-color: $color-white;
         transition: all 0.3s ease;
+        background-color: $color-white;
     }
     
     &.active {
         span:first-child {
             transform: rotate(45deg) translate(3px, 3px);
-            background-color: $color-white;
+            background-color: $color-white !important;
         }
         
         span:last-child {
             transform: rotate(-45deg) translate(3px, -3px);
-            background-color: $color-white;
+            background-color: $color-white !important;
         }
     }
 }
@@ -528,6 +528,18 @@
         height: 37px !important;
         fill: $color-white !important;
         color: $color-white !important;
+        
+        path {
+            fill: $color-white !important;
+        }
+        
+        g {
+            fill: $color-white !important;
+            
+            path {
+                fill: $color-white !important;
+            }
+        }
     }
 
     @include desktop {

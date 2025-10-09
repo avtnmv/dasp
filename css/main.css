@@ -221,8 +221,6 @@ body {
 .header__container.active .header__logo svg {
   fill: #ffffff !important;
   color: #ffffff !important;
-  position: relative;
-  z-index: 1234567;
 }
 
 .header__logo {
@@ -329,6 +327,9 @@ body {
   .header__mobile-dropdown.active {
     justify-content: flex-end;
   }
+}
+.header__mobile-dropdown.active .header__mobile-burger span {
+  background-color: #ffffff !important;
 }
 @media (min-width: 1024px) and (max-width: 1681px) {
   .header__mobile-dropdown {
@@ -575,16 +576,16 @@ body {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
   transition: all 0.3s ease;
+  background-color: #ffffff;
 }
 .header__mobile-burger.active span:first-child {
   transform: rotate(45deg) translate(3px, 3px);
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 .header__mobile-burger.active span:last-child {
   transform: rotate(-45deg) translate(3px, -3px);
-  background-color: #ffffff;
+  background-color: #ffffff !important;
 }
 
 .header__projects-menu {
@@ -665,6 +666,15 @@ body {
   height: 37px !important;
   fill: #ffffff !important;
   color: #ffffff !important;
+}
+.header__mobile-logo svg path {
+  fill: #ffffff !important;
+}
+.header__mobile-logo svg g {
+  fill: #ffffff !important;
+}
+.header__mobile-logo svg g path {
+  fill: #ffffff !important;
 }
 @media (min-width: 1024px) and (max-width: 1681px) {
   .header__mobile-logo {
@@ -1066,6 +1076,18 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+}
+.footer__top svg {
+  fill: #ffffff !important;
+}
+.footer__top svg path {
+  fill: #ffffff !important;
+}
+.footer__top svg g {
+  fill: #ffffff !important;
+}
+.footer__top svg g path {
+  fill: #ffffff !important;
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .footer__top {
