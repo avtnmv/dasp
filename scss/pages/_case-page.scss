@@ -311,6 +311,16 @@
     img{
         display: block;
         width: 100%;
+        max-width: 49%;
+        
+
+        @include large-desktop {
+            max-width: 900px;
+        }
+
+        @include tablet {
+            max-width: 600px;
+        }
     }
 
     @include mobile {

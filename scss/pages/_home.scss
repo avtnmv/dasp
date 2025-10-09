@@ -857,7 +857,7 @@
 .why-we__block-description {
     font-size: 16px;
     color: $color-gray;
-    line-height: 1.6;
+    line-height: 22px;
     margin: 0;
 }
 // End Why we section
@@ -1066,6 +1066,10 @@
 
 // Out team section
 
+.our-team {
+    position: relative;
+}
+
 .our-team__container{
     max-width: 1840px;
     padding: 0 40px;
@@ -1094,7 +1098,7 @@
 }
 
 .our-team__photo-container {
-    position: fixed;
+    position: absolute;
     width: 285px;
     height: 345px;
     overflow: hidden;

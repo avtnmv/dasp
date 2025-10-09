@@ -44,9 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Функция для обновления позиции фото
     function updatePhotoPosition() {
         if (hoveredItem && photoContainer.classList.contains('active')) {
-            const rect = hoveredItem.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            const centerY = rect.top + rect.height / 2;
+            const nameSpan = hoveredItem.querySelector('.our-team__name');
+            if (!nameSpan) return;
+            
+            const rect = nameSpan.getBoundingClientRect();
+            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+            
+            const centerX = rect.left + scrollX + rect.width / 2;
+            const centerY = rect.top + scrollY + rect.height / 2;
             
             photoContainer.style.left = centerX + 'px';
             photoContainer.style.top = centerY + 'px';
