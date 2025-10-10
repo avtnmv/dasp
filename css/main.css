@@ -119,6 +119,7 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
   background-color: #f1f1f1;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2415,6 +2416,7 @@ body {
 
 .our-team {
   position: relative;
+  overflow: hidden;
 }
 
 .our-team__container {
@@ -5076,6 +5078,16 @@ body {
   font-family: "SportingGrotesque", sans-serif;
   text-transform: none;
 }
+@media (min-width: 1024px) and (max-width: 1681px) {
+  .blog-cards__subtitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .blog-cards__subtitle {
+    font-size: 24px;
+  }
+}
 
 .blog-cards__arrow-link {
   display: flex;
@@ -5191,6 +5203,16 @@ body {
   .reverse-order {
     flex-direction: column-reverse;
   }
+}
+
+.cards__arrow-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.blog-cards__footer {
+  height: 40%;
 }
 
 .privacy-policy {
