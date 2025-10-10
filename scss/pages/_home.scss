@@ -427,6 +427,14 @@
     .swiper {
         overflow: hidden;
         position: relative;
+
+        @include desktop {
+            height: 400px;
+        }
+
+        @include large-desktop {
+            height: 400px;
+        }
     }
     
     .swiper-wrapper {
